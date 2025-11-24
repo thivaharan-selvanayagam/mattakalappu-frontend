@@ -1,108 +1,97 @@
 import Head from 'next/head';
 import Link from 'next/link';
-// Ensure the path to your API file is correct:
-import { fetchPosts } from '../lib/api'; 
+import { useState } from 'react';
+import { fetchMorePosts } from '../lib/api';
 import Navbar from "../components/Navbar";
 
-// --- 1. Data Fetching (getStaticProps) ---
-// This runs once at build time on the Vercel server.
+// ================================
+// DATA FETCHING - Get 50 Posts
+// ================================
 export async function getStaticProps() {
     try {
         const posts = await fetchMorePosts();
-        // Defensive check: Ensure posts is an array
-        const safePosts = Array.isArray(posts) ? posts : []; 
 
-        return { 
-            props: { posts: safePosts }, 
-            // Incremental Static Regeneration (ISR): Refreshes data every 60 seconds
-            revalidate: 60 
+        return {
+            props: { posts },
+            revalidate: 60
         };
     } catch (error) {
-        console.error("Error in getStaticProps for home page:", error);
-        return { 
-            props: { posts: [] }, 
-            revalidate: 60 
+        console.error("Error loading stories:", error);
+        return {
+            props: { posts: [] },
+            revalidate: 60
         };
     }
 }
 
-// --- Helper Function 1: Get Featured Image URL ---
+// ================================
+// HELPERS
+// ================================
 const getFeaturedImageUrl = (post) => {
     try {
-        // We rely on fetchPosts using the `?_embed` parameter for this path to exist.
-        const featuredMedia = post._embedded['wp:featuredmedia'][0];
-        
-        // Try to get the medium size for performance, fall back to full size
-        const imageUrl = featuredMedia.media_details.sizes.medium.source_url 
-                         || featuredMedia.media_details.sizes.full.source_url;
-                         
-        return imageUrl;
+        const media = post._embedded['wp:featuredmedia'][0];
+        return media.media_details.sizes.medium.source_url || media.source_url;
     } catch (e) {
-        // Fallback image if no featured media is available on the post
         return 'https://placehold.co/400x200/cccccc/333333?text=Batti+Heritage';
     }
 };
 
-// --- Helper Function 2: Clean HTML from Excerpts ---
 const stripHtml = (html) => {
     if (!html) return 'No excerpt available.';
-    
-    // 🎯 FIX: Remove the &nbsp; entity and then strip HTML tags
-    const cleanNBSP = html.replace(/&nbsp;/g, ' '); 
-    
-    // Basic regex to remove HTML tags
-    return cleanNBSP.replace(/<[^>]*>?/gm, '');
+    return html.replace(/&nbsp;/g, ' ').replace(/<[^>]*>?/gm, '');
 };
 
-// --- 3. The Landing Page Component (Home) ---
-export default function Home({ posts }) {
-    const postsToRender = Array.isArray(posts) ? posts : [];
-    
+// ================================
+// STORIES PAGE WITH PAGINATION
+// ================================
+export default function Stories({ posts }) {
+    const postsPerPage = 12;
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const totalPages = Math.ceil(posts.length / postsPerPage);
+
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+    const changePage = (page) => {
+        setCurrentPage(page);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <div>
-            {/* 1. Head component for external assets and metadata */}
             <Head>
-                <meta charSet="UTF-8" />
+                <title>Stories | Batticaloa Heritage</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>Batticaloa Heritage – Homepage</title>
-                {/* Font link */}
-                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
             </Head>
+
             <Navbar />
 
-
-            {/* --- Hero Section --- */}
             <header className="hero">
-                <h1>Unveiling the Heritage of Batticaloa</h1>
-                <p>Explore the stories, villages, culture, and history of the Eastern Jewel of Sri Lanka.</p>
-                <div>
-                    <Link className="btn" href="/posts">Explore Stories</Link>
-                    <Link className="btn btn-outline" href="#">Watch Documentaries</Link>
-                </div>
+                <h1>Stories of Batticaloa</h1>
+                <p>Discover history, culture and heritage through real stories.</p>
             </header>
-            
-            {/* --- SECTION 1: DYNAMIC POSTS (Replaced static cards) --- */}
+
             <section className="section">
-                <h2 className="section-title">Latest Discoveries & Stories</h2>
+                <h2 className="section-title">All Stories</h2>
 
                 <div className="grid">
-                    {postsToRender.length > 0 ? (
-                        // Map over the posts array fetched from WordPress
-                        postsToRender.map(post => (
+                    {currentPosts.length > 0 ? (
+                        currentPosts.map(post => (
                             <div className="card" key={post.id}>
-                                {/* 🎯 Featured Image Rendering */}
                                 <img 
-                                    src={getFeaturedImageUrl(post)} 
-                                    alt={`Featured image for ${stripHtml(post.title.rendered)}`}
+                                    src={getFeaturedImageUrl(post)}
+                                    alt={stripHtml(post.title.rendered)}
                                 />
+
                                 <div className="card-content">
-                                    {/* Post Title */}
                                     <h3 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                                    
-                                    {/* Post Excerpt (HTML stripped for clean text display) */}
-                                    <p>{stripHtml(post.excerpt.rendered).substring(0, 100)}...</p>
-                                    
-                                    {/* Link to the individual post page */}
+
+                                    <p>
+                                        {stripHtml(post.excerpt.rendered).substring(0, 120)}...
+                                    </p>
+
                                     <Link className="btn" href={`/posts/${post.id}`}>
                                         Read More
                                     </Link>
@@ -110,173 +99,70 @@ export default function Home({ posts }) {
                             </div>
                         ))
                     ) : (
-                        // Fallback message if no posts are found
-                        <div style={{gridColumn: '1 / -1', textAlign: 'center', padding: '50px'}}>
-                            <p style={{fontSize: '1.2em', color: 'var(--secondary-color)'}}>No stories found. Please ensure your WordPress API is working and posts are published.</p>
-                        </div>
+                        <p style={{textAlign: 'center'}}>No stories found.</p>
                     )}
+                </div>
+
+                {/* Pagination */}
+                <div className="pagination">
+                    {[...Array(totalPages)].map((_, i) => (
+                        <button
+                            key={i}
+                            className={`page-btn ${currentPage === i + 1 ? 'active' : ''}`}
+                            onClick={() => changePage(i + 1)}
+                        >
+                            {i + 1}
+                        </button>
+                    ))}
                 </div>
             </section>
 
-            {/* --- Footer --- */}
             <footer className="footer">
-                <p>&copy; 2025 Batticaloa Heritage. All Rights Reserved. | Designed for Discovery and Preservation.</p>
+                <p>&copy; 2025 Batticaloa Heritage. All Rights Reserved.</p>
             </footer>
 
-            {/* 4. The Critical CSS Block (styled-jsx global) */}
             <style jsx global>{`
-                /* Modern Reset and Variables */
-                :root {
-                    --primary-color: #007bff; /* A vibrant blue */
-                    --secondary-color: #6c757d;
-                    --text-color: #212529;
-                    --background-light: #f8f9fa;
-                    --white: #ffffff;
-                    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
-                    --transition-speed: 0.3s;
-                }
-
-                * {
-                    box-sizing: border-box;
-                }
-
-                body {
-                    margin: 0;
-                    font-family: 'Poppins', sans-serif;
-                    color: var(--text-color);
-                    background: var(--background-light);
-                    line-height: 1.6;
-                }
-
-                .logo {
-                    font-size: 24px;
-                    font-weight: 700;
-                    color: var(--primary-color);
-                    text-decoration: none;
-                }
-
-                .nav-links a {
-                    color: var(--text-color);
-                    text-decoration: none;
-                    margin-left: 25px;
-                    font-weight: 500;
-                    transition: color var(--transition-speed);
-                }
-
-                .nav-links a:hover {
-                    color: var(--primary-color);
-                }
-
-                /* --- Hero Section --- */
                 .hero {
-                    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/hero.jpg') center/cover no-repeat; /* Real image of Batticaloa lagoon */
-                    padding: 150px 20px; /* Increased padding */
+                    padding: 80px 20px;
                     text-align: center;
-                    color: var(--white);
-                    min-height: 60vh;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
+                    background: #111;
+                    color: white;
                 }
 
-                .hero h1 {
-                    font-size: 64px; /* Larger heading */
-                    margin: 0 0 15px;
-                    font-weight: 700;
-                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-                }
-
-                .hero p {
-                    font-size: 22px;
-                    margin-bottom: 40px;
-                    max-width: 700px;
-                }
-
-                /* --- Buttons --- */
-                .btn {
-                    padding: 12px 25px;
-                    background: var(--primary-color);
-                    color: var(--white);
-                    text-decoration: none;
-                    border-radius: 50px; /* Pill-shaped buttons */
-                    font-weight: 600;
-                    margin: 8px;
-                    transition: background-color var(--transition-speed), transform var(--transition-speed);
-                    display: inline-block;
-                    border: none;
-                    cursor: pointer;
-                }
-
-                .btn:hover {
-                    background: #0056b3; /* Darker blue on hover */
-                    transform: translateY(-2px);
-                }
-
-                .btn-outline {
-                    background: transparent;
-                    color: var(--white);
-                    border: 2px solid var(--white);
-                }
-
-                .btn-outline:hover {
-                    background: rgba(255, 255, 255, 0.1);
-                    border-color: var(--white);
-                }
-
-                /* --- Content Sections --- */
                 .section {
-                    padding: 80px 20px; /* Increased vertical padding */
                     max-width: 1200px;
                     margin: auto;
+                    padding: 60px 20px;
                 }
 
                 .section-title {
                     text-align: center;
-                    margin-bottom: 50px;
-                    font-size: 36px;
-                    font-weight: 600;
-                    color: var(--text-color);
-                    position: relative;
-                }
-
-                .section-title::after {
-                    content: '';
-                    display: block;
-                    width: 50px;
-                    height: 3px;
-                    background: var(--primary-color);
-                    margin: 10px auto 0;
-                    border-radius: 2px;
+                    font-size: 32px;
+                    margin-bottom: 40px;
                 }
 
                 .grid {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Larger minimum size */
-                    gap: 30px;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 25px;
                 }
 
-                /* --- Card Styles (Core Feature) --- */
                 .card {
-                    background: var(--white);
-                    padding: 0;
-                    border-radius: 10px;
-                    box-shadow: var(--shadow-light);
+                    background: #fff;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
                     overflow: hidden;
-                    text-align: left;
-                    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+                    transition: transform 0.3s ease;
                 }
 
                 .card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                    transform: translateY(-6px);
                 }
 
                 .card img {
                     width: 100%;
-                    height: 200px; /* Fixed height for image consistency */
+                    height: 200px;
                     object-fit: cover;
-                    display: block;
                 }
 
                 .card-content {
@@ -284,78 +170,44 @@ export default function Home({ posts }) {
                 }
 
                 .card h3 {
-                    margin-top: 0;
-                    margin-bottom: 10px;
+                    margin: 0 0 10px;
                     font-size: 20px;
-                    font-weight: 600;
-                    color: var(--primary-color);
                 }
 
                 .card p {
                     font-size: 14px;
-                    color: var(--secondary-color);
-                    margin-bottom: 20px;
+                    color: #666;
                 }
 
-                .card .btn {
-                    margin: 0;
-                    padding: 8px 15px;
+                .btn {
+                    display: inline-block;
+                    margin-top: 10px;
+                    background: #007bff;
+                    color: white;
+                    padding: 8px 16px;
+                    border-radius: 30px;
+                    text-decoration: none;
                     font-size: 14px;
                 }
 
-                /* Featured Documentary Card - Unique Style */
-                .featured-doc-card {
-                    max-width: 800px;
-                    margin: 0 auto;
+                .pagination {
+                    margin-top: 40px;
                     text-align: center;
-                    padding: 40px;
-                    background: var(--primary-color);
-                    color: var(--white);
                 }
 
-                .featured-doc-card h3 {
-                    color: var(--white);
-                    font-size: 30px;
+                .page-btn {
+                    margin: 5px;
+                    padding: 8px 14px;
+                    border: none;
+                    background: #eee;
+                    cursor: pointer;
+                    border-radius: 6px;
+                    font-weight: 600;
                 }
 
-                .featured-doc-card p {
-                    color: rgba(255, 255, 255, 0.9);
-                    margin-bottom: 30px;
-                }
-                
-                /* Shop Section Cards - Cleaner Look */
-                #shop .card {
-                    text-align: center;
-                    padding: 30px;
-                }
-                
-                #shop .card h3 {
-                    font-size: 22px;
-                }
-
-                /* --- Footer --- */
-                .footer {
-                    background: var(--text-color);
-                    color: var(--background-light);
-                    text-align: center;
-                    padding: 40px 20px;
-                    font-size: 14px;
-                }
-
-                /* Media Queries for responsiveness */
-                @media (max-width: 768px) {
-                    .navbar {
-                        padding: 15px 20px;
-                    }
-                    .hero h1 {
-                        font-size: 48px;
-                    }
-                    .hero p {
-                        font-size: 18px;
-                    }
-                    .section-title {
-                        font-size: 30px;
-                    }
+                .page-btn.active {
+                    background: #007bff;
+                    color: white;
                 }
             `}</style>
         </div>
