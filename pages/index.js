@@ -44,8 +44,13 @@ const getFeaturedImageUrl = (post) => {
 
 // --- Helper Function 2: Clean HTML from Excerpts ---
 const stripHtml = (html) => {
+    if (!html) return 'No excerpt available.';
+    
+    // 🎯 FIX: Remove the &nbsp; entity and then strip HTML tags
+    const cleanNBSP = html.replace(/&nbsp;/g, ' '); 
+    
     // Basic regex to remove HTML tags
-    return html ? html.replace(/<[^>]*>?/gm, '') : 'No excerpt available.';
+    return cleanNBSP.replace(/<[^>]*>?/gm, '');
 };
 
 // --- 3. The Landing Page Component (Home) ---
