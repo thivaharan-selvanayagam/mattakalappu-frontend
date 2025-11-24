@@ -205,19 +205,6 @@ export default function Home({ posts }) {
                     line-height: 1.6;
                 }
 
-                /* --- Navigation Bar --- */
-                .navbar {
-                    position: sticky;
-                    top: 0;
-                    z-index: 1000;
-                    background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
-                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                    padding: 15px 40px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-
                 .logo {
                     font-size: 24px;
                     font-weight: 700;
@@ -416,9 +403,6 @@ export default function Home({ posts }) {
                 @media (max-width: 768px) {
                     .navbar {
                         padding: 15px 20px;
-                    }
-                    .nav-links {
-                        display: none; /* Hide nav links on small screens for simplicity */
                     }
                     .hero h1 {
                         font-size: 48px;
