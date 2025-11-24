@@ -69,15 +69,18 @@ export default function Home({ posts }) {
             </Head>
             
             {/* --- Navigation Bar --- */}
-            <nav className="navbar">
-                <Link href="/" className="logo">Batticaloa Heritage</Link>
-                <div className="nav-links">
-                    <Link href="#">Explore</Link>
-                    <Link href="#">Stories</Link>
-                    <Link href="#">Villages</Link>
-                    <Link href="#">Shop</Link>
-                </div>
-            </nav>
+                <nav className="navbar">
+                    <Link href="/" className="logo">Batticaloa Heritage</Link>
+
+                    <div className="nav-links">
+                        <Link href="/projects">Projects</Link>
+                        <Link href="/explore">Explore</Link>
+                        <Link href="/stories">Stories</Link>
+                        <Link href="/villages">Villages</Link>
+                        <Link href="/shop">Shop</Link>
+                    </div>
+                </nav>
+
 
             {/* --- Hero Section --- */}
             <header className="hero">
@@ -235,7 +238,7 @@ export default function Home({ posts }) {
 
                 /* --- Hero Section --- */
                 .hero {
-                    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero.jpg') center/cover no-repeat; /* Real image of Batticaloa lagoon */
+                    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/hero.jpg') center/cover no-repeat; /* Real image of Batticaloa lagoon */
                     padding: 150px 20px; /* Increased padding */
                     text-align: center;
                     color: var(--white);
