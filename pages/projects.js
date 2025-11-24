@@ -1,8 +1,4 @@
-// pages/projects.js
-// Next.js Project Landing Page for:
-// 1. Palm Leaf Manuscripts Translation Project
-// 2. Flavours of Batticaloa Documentary Project
-// Uses the same color palette and design style from your homepage
+"use client";  // REQUIRED for styled-jsx to work on Vercel
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -38,12 +34,12 @@ export default function Projects() {
       <section className="section">
         <div className="project-card">
           <Image
-                src="/manuscript.jpg"
-                alt="Palm Leaf Manuscripts"
-                width={600}
-                height={400}
-                className="rounded-lg shadow"
-            />
+            src="/manuscript.jpg"   // FIXED EXTENSION
+            alt="Palm Leaf Manuscripts"
+            width={600}
+            height={400}
+            className="rounded-lg shadow"
+          />
           <div className="project-content">
             <h2>Palm Leaf Manuscripts Translation</h2>
             <p>
@@ -52,10 +48,10 @@ export default function Projects() {
             </p>
             <ul>
               <li>Palm Leaf Manuscripts Translation</li>
-              <li>Ancient Tamil Script/Text → Modern Tamil Translation</li>
+              <li>Ancient Tamil Script → Modern Tamil Translation</li>
               <li>Scholarly commentary</li>
-              <li>Reconstructed replicas for cultural education</li>
-              <li>Tiered Digital Access and Preservation</li>
+              <li>Reconstructed replicas for education</li>
+              <li>Digital Preservation & Tiered Access</li>
             </ul>
             <Link href="#" className="btn">Learn More</Link>
           </div>
@@ -66,12 +62,12 @@ export default function Projects() {
       <section className="section">
         <div className="project-card reverse">
           <Image
-                src="/food.jpg"
-                alt="traditional food"
-                width={600}
-                height={400}
-                className="rounded-lg shadow"
-            />
+            src="/food.jpg"
+            alt="Traditional Food"
+            width={600}
+            height={400}
+            className="rounded-lg shadow"
+          />
           <div className="project-content">
             <h2>Flavours of Batticaloa – Documentary</h2>
             <p>
@@ -80,8 +76,8 @@ export default function Projects() {
             </p>
             <ul>
               <li>Traditional recipe documentation</li>
-              <li>Video interviews with local experts</li>
-              <li>Step-by-step cooking visuals</li>
+              <li>Video interviews with knowledgeable elders</li>
+              <li>Cooking process recordings</li>
               <li>Historical & cultural background</li>
             </ul>
             <Link href="#" className="btn">Watch Trailer</Link>
@@ -96,6 +92,12 @@ export default function Projects() {
 
       {/* Styles */}
       <style jsx>{`
+        :global(body) {
+          margin: 0;
+          font-family: 'Poppins', sans-serif;
+          background: var(--background-light);
+        }
+
         :root {
           --primary-color: #007bff;
           --secondary-color: #6c757d;
@@ -105,30 +107,30 @@ export default function Projects() {
           --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
-        body {
-          margin: 0;
-          font-family: 'Poppins', sans-serif;
-          background: var(--background-light);
-        }
-
         .navbar {
           background: rgba(255, 255, 255, 0.95);
           box-shadow: var(--shadow-light);
           padding: 15px 40px;
           display: flex;
           justify-content: space-between;
+          align-items: center;
+          position: sticky;
+          top: 0;
+          z-index: 1000;
         }
 
         .logo {
           font-size: 24px;
           font-weight: 700;
           color: var(--primary-color);
+          text-decoration: none;
         }
 
         .nav-links a {
           margin-left: 20px;
           text-decoration: none;
           color: var(--text-color);
+          font-weight: 500;
         }
 
         .hero {
@@ -138,7 +140,10 @@ export default function Projects() {
           padding: 120px 20px;
         }
 
-        .hero h1 { font-size: 48px; }
+        .hero h1 {
+          font-size: 48px;
+          margin-bottom: 10px;
+        }
 
         .section {
           padding: 80px 20px;
@@ -152,15 +157,11 @@ export default function Projects() {
           border-radius: 10px;
           display: flex;
           overflow: hidden;
+          margin-bottom: 60px;
         }
 
         .project-card.reverse {
           flex-direction: row-reverse;
-        }
-
-        .project-card img {
-          width: 50%;
-          object-fit: cover;
         }
 
         .project-content {
@@ -186,6 +187,11 @@ export default function Projects() {
           color: var(--white);
           border-radius: 50px;
           text-decoration: none;
+          transition: 0.3s;
+        }
+
+        .btn:hover {
+          background: #0056b3;
         }
 
         .footer {
@@ -195,13 +201,18 @@ export default function Projects() {
           text-align: center;
         }
 
+        /* Mobile Fix */
         @media(max-width: 900px) {
+          .nav-links {
+            display: none; /* Same behavior as your homepage */
+          }
+
           .project-card {
             flex-direction: column;
           }
 
-          .project-card img,
-          .project-content {
+          .project-content, 
+          .project-card :global(img) {
             width: 100%;
           }
         }
