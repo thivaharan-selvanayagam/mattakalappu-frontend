@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { fetchMorePosts } from '../lib/api';
 import Navbar from "../components/Navbar";
 
+
 // ================================
 // DATA FETCHING - Get 50 Posts
 // ================================
@@ -94,7 +95,7 @@ export default function Stories({ posts }) {
                                         {stripHtml(post.excerpt.rendered).substring(0, 120)}...
                                     </p>
 
-                                    <Link className="btn" href={`/posts/${post.id}`}>
+                                    <Link className="btn" href={`/posts/${post.slug}`}>
                                         Read More
                                     </Link>
                                 </div>
