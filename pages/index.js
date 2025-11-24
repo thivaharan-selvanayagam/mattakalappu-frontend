@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { fetchPosts } from '../lib/api'; 
 
 // --- 1. Data Fetching (getStaticProps) ---
+// This runs once at build time on the Vercel server.
 export async function getStaticProps() {
     try {
         const posts = await fetchPosts();
@@ -12,7 +13,7 @@ export async function getStaticProps() {
 
         return { 
             props: { posts: safePosts }, 
-            // ISR setting to automatically refresh data every 60 seconds
+            // Incremental Static Regeneration (ISR): Refreshes data every 60 seconds
             revalidate: 60 
         };
     } catch (error) {
@@ -24,23 +25,41 @@ export async function getStaticProps() {
     }
 }
 
-// --- Helper Function to Clean HTML from Excerpts ---
+// --- Helper Function 1: Get Featured Image URL ---
+const getFeaturedImageUrl = (post) => {
+    try {
+        // We rely on fetchPosts using the `?_embed` parameter for this path to exist.
+        const featuredMedia = post._embedded['wp:featuredmedia'][0];
+        
+        // Try to get the medium size for performance, fall back to full size
+        const imageUrl = featuredMedia.media_details.sizes.medium.source_url 
+                         || featuredMedia.media_details.sizes.full.source_url;
+                         
+        return imageUrl;
+    } catch (e) {
+        // Fallback image if no featured media is available on the post
+        return 'https://placehold.co/400x200/cccccc/333333?text=Batti+Heritage';
+    }
+};
+
+// --- Helper Function 2: Clean HTML from Excerpts ---
 const stripHtml = (html) => {
+    // Basic regex to remove HTML tags
     return html ? html.replace(/<[^>]*>?/gm, '') : 'No excerpt available.';
 };
 
-// --- 2. The Landing Page Component (Home) ---
+// --- 3. The Landing Page Component (Home) ---
 export default function Home({ posts }) {
     const postsToRender = Array.isArray(posts) ? posts : [];
     
     return (
         <div>
-            {/* 🎯 Head component for external assets and metadata */}
+            {/* 1. Head component for external assets and metadata */}
             <Head>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>Batticaloa Heritage – Homepage</title>
-                {/* Font link goes here */}
+                {/* Font link */}
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
             </Head>
             
@@ -74,12 +93,10 @@ export default function Home({ posts }) {
                         // Map over the posts array fetched from WordPress
                         postsToRender.map(post => (
                             <div className="card" key={post.id}>
-                                {/* Placeholder Image - Fetching the featured image URL 
-                                requires a specific API call (post._embedded['wp:featuredmedia']) 
-                                which is outside the scope of this file. Using generic placeholder. */}
+                                {/* 🎯 Featured Image Rendering */}
                                 <img 
-                                    src="https://images.unsplash.com/photo-1590412850926-d6b9d6a36f4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
-                                    alt={`Image for ${stripHtml(post.title.rendered)}`}
+                                    src={getFeaturedImageUrl(post)} 
+                                    alt={`Featured image for ${stripHtml(post.title.rendered)}`}
                                 />
                                 <div className="card-content">
                                     {/* Post Title */}
@@ -154,7 +171,7 @@ export default function Home({ posts }) {
                 <p>&copy; 2025 Batticaloa Heritage. All Rights Reserved. | Designed for Discovery and Preservation.</p>
             </footer>
 
-            {/* 🎯 THE CRITICAL CSS FIX: Use styled-jsx global syntax outside of Head */}
+            {/* 4. The Critical CSS Block (styled-jsx global) */}
             <style jsx global>{`
                 /* Modern Reset and Variables */
                 :root {
