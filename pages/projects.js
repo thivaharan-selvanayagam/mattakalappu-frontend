@@ -34,13 +34,7 @@ export default function Projects() {
       {/* Palm Leaf Manuscripts Project */}
       <section className="section">
         <div className="project-card">
-          <Image
-            src="/manuscript.jpg"
-            alt="Palm Leaf Manuscripts"
-            width={600}
-            height={400}
-            className="rounded-lg shadow"
-          />
+          <img src="/manuscript.jpg" alt="Palm Leaf Manuscripts" />
           <div className="project-content">
             <h2>Palm Leaf Manuscripts Translation</h2>
             <p>
@@ -66,13 +60,7 @@ export default function Projects() {
       {/* Flavours of Batticaloa Documentary */}
       <section className="section">
         <div className="project-card reverse">
-          <Image
-            src="/food.jpg"
-            alt="Traditional Food"
-            width={600}
-            height={400}
-            className="rounded-lg shadow"
-          />
+         <img src="/food.jpg" alt="Batticaloa Food Documentary" />
           <div className="project-content">
             <h2>Flavours of Batticaloa – Documentary</h2>
             <p>

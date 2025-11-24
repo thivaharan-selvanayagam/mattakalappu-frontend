@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 // Ensure the path to your API file is correct:
 import { fetchPosts } from '../lib/api'; 
+import Navbar from "../components/Navbar";
 
 // --- 1. Data Fetching (getStaticProps) ---
 // This runs once at build time on the Vercel server.
@@ -67,19 +68,7 @@ export default function Home({ posts }) {
                 {/* Font link */}
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
             </Head>
-            
-            {/* --- Navigation Bar --- */}
-                <nav className="navbar">
-                    <Link href="/" className="logo">Batticaloa Heritage</Link>
-
-                    <div className="nav-links">
-                        <Link href="/projects">Projects</Link>
-                        <Link href="/explore">Explore</Link>
-                        <Link href="/stories">Stories</Link>
-                        <Link href="/villages">Villages</Link>
-                        <Link href="/shop">Shop</Link>
-                    </div>
-                </nav>
+            <Navbar />
 
 
             {/* --- Hero Section --- */}
