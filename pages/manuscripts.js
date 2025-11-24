@@ -238,6 +238,10 @@ with various birth stars…”</p>
         </section>
 
       </div>
+      {/* --- Footer --- */}
+            <footer className="footer">
+                <p>&copy; 2025 Batticaloa Heritage. All Rights Reserved. | Designed for Discovery and Preservation.</p>
+            </footer>
       <style jsx global>{`
 
         /* ------------------- GLOBAL PAGE STYLE ------------------- */
@@ -392,6 +396,15 @@ with various birth stars…”</p>
   margin-top: 15px;
   color: #111;
 }
+
+/* --- Footer --- */
+                .footer {
+                    background: var(--text-color);
+                    color: var(--background-light);
+                    text-align: center;
+                    padding: 40px 20px;
+                    font-size: 14px;
+                }
 
       
       `}</style>
