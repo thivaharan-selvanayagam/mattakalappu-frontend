@@ -20,10 +20,10 @@ export default function Navbar() {
             {/* --- Navigation Links --- */}
             <div className={`nav-links ${menuOpen ? "show" : ""}`}>
                 <Link href="/projects">Projects</Link>
-                <Link href="/explore">Explore</Link>
+                {/* <Link href="/explore">Explore</Link> */}
                 <Link href="/stories">Stories</Link>
-                <Link href="/villages">Villages</Link>
-                <Link href="/shop">Shop</Link>
+                {/* <Link href="/villages">Villages</Link>
+                <Link href="/shop">Shop</Link> */}
             </div>
         </nav>
     );
