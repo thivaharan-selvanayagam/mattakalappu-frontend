@@ -3,18 +3,24 @@ import { fetchPostById, fetchPosts } from '../../lib/api';
 
 
 export async function getStaticPaths() {
-  const posts = await fetchPosts();
+    try {
+        const posts = await fetchPosts(); // This call is likely failing intermittently
+        const paths = posts.map(post => ({
+            params: { id: post.id.toString() },
+        }));
 
-  if (!Array.isArray(posts)) {
-    console.error("fetchPosts() did NOT return an array:", posts);
-    return { paths: [], fallback: 'blocking' };
-  }
-
-  const paths = posts.map(p => ({
-    params: { id: String(p.id) }
-  }));
-
-  return { paths, fallback: 'blocking' };
+        return {
+            paths,
+            fallback: 'blocking', // Prevents 404s and handles failed paths on demand
+        };
+    } catch (e) {
+        console.error("Error fetching paths, proceeding with empty paths:", e);
+        // If path fetching fails, we return an empty array and rely on fallback
+        return {
+            paths: [],
+            fallback: 'blocking', 
+        };
+    }
 }
 
 
