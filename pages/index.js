@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 // Ensure the path to your API file is correct:
 import { fetchPosts } from '../lib/api'; 
-import "../components/Navbar.js";
 
 // --- 1. Data Fetching (getStaticProps) ---
 // This runs once at build time on the Vercel server.

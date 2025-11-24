@@ -1,39 +1,40 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
-import "../components/Navbar.js";
+import Navbar from "../components/Navbar"; // ✅ Correct import
 
 export default function Projects() {
   return (
     <div>
       <Head>
         <title>Projects – Batticaloa Heritage</title>
-        <meta name="description" content="Cultural preservation projects of Batticaloa" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+        <meta
+          name="description"
+          content="Cultural preservation projects of Batticaloa"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
-      {/* Navbar */}
-      <nav className="navbar">
-        <Link href="/" className="logo">Batticaloa Heritage</Link>
-        <div className="nav-links">
-          <Link href="/projects">Projects</Link>
-          <Link href="/posts">Stories</Link>
-          <Link href="#">Villages</Link>
-          <Link href="#">Shop</Link>
-        </div>
-      </nav>
+      {/* Navbar Component */}
+      <Navbar />
 
-      {/* Hero */}
+      {/* Hero Section */}
       <header className="hero">
         <h1>Our Cultural Preservation Projects</h1>
-        <p>Documenting the heritage, manuscripts, and lost traditions of Batticaloa.</p>
+        <p>
+          Documenting the heritage, manuscripts, and lost traditions of
+          Batticaloa.
+        </p>
       </header>
 
       {/* Palm Leaf Manuscripts Project */}
       <section className="section">
         <div className="project-card">
           <Image
-            src="/manuscript.jpg"   // FIXED EXTENSION
+            src="/manuscript.jpg"
             alt="Palm Leaf Manuscripts"
             width={600}
             height={400}
@@ -42,8 +43,10 @@ export default function Projects() {
           <div className="project-content">
             <h2>Palm Leaf Manuscripts Translation</h2>
             <p>
-              A long-term initiative to collect, digitize, translate, and publish ancient Batticaloa palm leaf manuscripts.
-              These documents contain centuries-old wisdom, rituals, astrology, medicine, poetry, and local history.
+              A long-term initiative to collect, digitize, translate, and
+              publish ancient Batticaloa palm leaf manuscripts containing
+              centuries-old knowledge on rituals, medicine, poetry, and local
+              history.
             </p>
             <ul>
               <li>Palm Leaf Manuscripts Translation</li>
@@ -52,7 +55,9 @@ export default function Projects() {
               <li>Reconstructed replicas for education</li>
               <li>Digital Preservation & Tiered Access</li>
             </ul>
-            <Link href="#" className="btn">Learn More</Link>
+            <Link href="#" className="btn">
+              Learn More
+            </Link>
           </div>
         </div>
       </section>
@@ -70,8 +75,9 @@ export default function Projects() {
           <div className="project-content">
             <h2>Flavours of Batticaloa – Documentary</h2>
             <p>
-              An exclusive documentary project uncovering Batticaloa’s forgotten and disappearing traditional food culture.
-              From the iconic <b>Sothi</b> to seasonal dishes, this project preserves cooking methods known only to a few elders.
+              A documentary uncovering Batticaloa’s disappearing traditional
+              food culture, recording recipes, cooking methods, and oral
+              histories known only to a few elders.
             </p>
             <ul>
               <li>Traditional recipe documentation</li>
@@ -79,61 +85,29 @@ export default function Projects() {
               <li>Cooking process recordings</li>
               <li>Historical & cultural background</li>
             </ul>
-            <Link href="#" className="btn">Watch Trailer</Link>
+            <Link href="#" className="btn">
+              Watch Trailer
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="footer">
-        <p>© 2025 Batticaloa Heritage – Preserving the Culture of the Eastern Jewel.</p>
+        <p>
+          © 2025 Batticaloa Heritage – Preserving the Culture of the Eastern
+          Jewel.
+        </p>
       </footer>
 
-      {/* Styles */}
+      {/* Component-level styles */}
       <style jsx>{`
-        :global(body) {
-          margin: 0;
-          font-family: 'Poppins', sans-serif;
-          background: var(--background-light);
-        }
-
-        :root {
-          --primary-color: #007bff;
-          --secondary-color: #6c757d;
-          --text-color: #212529;
-          --background-light: #f8f9fa;
-          --white: #ffffff;
-          --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .navbar {
-          background: rgba(255, 255, 255, 0.95);
-          box-shadow: var(--shadow-light);
-          padding: 15px 40px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          position: sticky;
-          top: 0;
-          z-index: 1000;
-        }
-
-        .logo {
-          font-size: 24px;
-          font-weight: 700;
-          color: var(--primary-color);
-          text-decoration: none;
-        }
-
-        .nav-links a {
-          margin-left: 20px;
-          text-decoration: none;
-          color: var(--text-color);
-          font-weight: 500;
-        }
-
         .hero {
-          background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('/hero.jpg') center/cover;
+          background: linear-gradient(
+              rgba(0, 0, 0, 0.6),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url("/hero.jpg") center/cover;
           text-align: center;
           color: var(--white);
           padding: 120px 20px;
@@ -200,17 +174,12 @@ export default function Projects() {
           text-align: center;
         }
 
-        /* Mobile Fix */
-        @media(max-width: 900px) {
-          .nav-links {
-            display: none; /* Same behavior as your homepage */
-          }
-
+        @media (max-width: 900px) {
           .project-card {
             flex-direction: column;
           }
 
-          .project-content, 
+          .project-content,
           .project-card :global(img) {
             width: 100%;
           }
