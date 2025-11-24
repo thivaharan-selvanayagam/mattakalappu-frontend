@@ -154,18 +154,31 @@ export default function Stories({ posts }) {
                     max-width: 700px;
                 }
 
+                /* --- Content Sections --- */
                 .section {
+                    padding: 80px 20px; /* Increased vertical padding */
                     max-width: 1200px;
                     margin: auto;
-                    padding: 60px 20px;
                 }
 
                 .section-title {
                     text-align: center;
-                    font-size: 32px;
-                    margin-bottom: 40px;
+                    margin-bottom: 50px;
+                    font-size: 36px;
+                    font-weight: 600;
+                    color: var(--text-color);
+                    position: relative;
                 }
 
+                .section-title::after {
+                    content: '';
+                    display: block;
+                    width: 50px;
+                    height: 3px;
+                    background: var(--primary-color);
+                    margin: 10px auto 0;
+                    border-radius: 2px;
+                }
                
                 .grid {
                     display: grid;
