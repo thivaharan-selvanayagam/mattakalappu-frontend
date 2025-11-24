@@ -1,8 +1,7 @@
-"use client";  // REQUIRED for styled-jsx to work on Vercel
-
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from "next/image";
+import "../components/Navbar.js";
 
 export default function Projects() {
   return (
