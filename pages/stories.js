@@ -72,10 +72,6 @@ export default function Stories({ posts }) {
             <header className="hero">
                 <h1>Stories of Batticaloa</h1>
                 <p>Discover history, culture and heritage through real stories.</p>
-                <div>
-                    <Link className="btn" href="/projects">Projects</Link>
-                    <Link className="btn btn-outline" href="#">Contact Us</Link>
-                </div>
             </header>
 
 
@@ -130,29 +126,26 @@ export default function Stories({ posts }) {
             <style jsx global>{`
                 /* --- Hero Section --- */
                 .hero {
-                    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/hero.jpg') center/cover no-repeat; /* Real image of Batticaloa lagoon */
-                    padding: 150px 20px; /* Increased padding */
-                    text-align: center;
-                    color: var(--white);
-                    min-height: 60vh;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
+                        background: linear-gradient(
+                            rgba(0, 0, 0, 0.6),
+                            rgba(0, 0, 0, 0.5)
+                        ),
+                        url("/hero.jpg") center/cover;
+                        text-align: center;
+                        color: var(--white);
+                        padding: 120px 20px;
+                    }
 
-                .hero h1 {
-                    font-size: 64px; /* Larger heading */
-                    margin: 0 0 15px;
-                    font-weight: 700;
-                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-                }
+                    .hero h1 {
+                        font-size: 48px;
+                        margin-bottom: 15px;
+                    }
 
-                .hero p {
-                    font-size: 22px;
-                    margin-bottom: 40px;
-                    max-width: 700px;
-                }
+                    .hero p {
+                        font-size: 20px;
+                        max-width: 700px;
+                        margin: 0 auto;
+                    }
 
                 /* --- Content Sections --- */
                 .section {
