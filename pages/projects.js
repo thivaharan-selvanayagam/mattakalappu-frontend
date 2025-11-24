@@ -50,7 +50,7 @@ export default function Projects() {
               <li>Reconstructed replicas for education</li>
               <li>Digital Preservation & Tiered Access</li>
             </ul>
-            <Link href="#" className="btn">
+            <Link href="/manuscripts" className="btn">
               Learn More
             </Link>
           </div>
