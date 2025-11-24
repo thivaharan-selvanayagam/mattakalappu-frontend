@@ -160,6 +160,18 @@ export default function Home({ posts }) {
                             <p>Authentic local artisan work supporting the community's traditional skills.</p>
                         </div>
                     </div>
+                    <div className="card">
+                        <div className="card-content">
+                            <h3>Food Receipie Books</h3>
+                            <p>Documenting lost receipes of our traditional foods.</p>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <div className="card-content">
+                            <h3>Cultural Tour</h3>
+                            <p>Worship with Batticaloa's ancient temples</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
