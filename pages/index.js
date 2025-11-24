@@ -230,7 +230,7 @@ export default function Home({ posts }) {
 
                 /* --- Hero Section --- */
                 .hero {
-                    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1601633513361-b5c5e0e0a53b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80') center/cover no-repeat; /* Real image of Batticaloa lagoon */
+                    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero.jpg') center/cover no-repeat; /* Real image of Batticaloa lagoon */
                     padding: 150px 20px; /* Increased padding */
                     text-align: center;
                     color: var(--white);
