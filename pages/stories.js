@@ -68,10 +68,16 @@ export default function Stories({ posts }) {
 
             <Navbar />
 
+            {/* --- Hero Section --- */}
             <header className="hero">
                 <h1>Stories of Batticaloa</h1>
                 <p>Discover history, culture and heritage through real stories.</p>
+                <div>
+                    <Link className="btn" href="/projects">Projects</Link>
+                    <Link className="btn btn-outline" href="#">Contact Us</Link>
+                </div>
             </header>
+
 
             <section className="section">
                 <h2 className="section-title">All Stories</h2>
@@ -122,11 +128,30 @@ export default function Stories({ posts }) {
             </footer>
 
             <style jsx global>{`
+                /* --- Hero Section --- */
                 .hero {
-                    padding: 80px 20px;
+                    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/hero.jpg') center/cover no-repeat; /* Real image of Batticaloa lagoon */
+                    padding: 150px 20px; /* Increased padding */
                     text-align: center;
-                    background: #111;
-                    color: white;
+                    color: var(--white);
+                    min-height: 60vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .hero h1 {
+                    font-size: 64px; /* Larger heading */
+                    margin: 0 0 15px;
+                    font-weight: 700;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+
+                .hero p {
+                    font-size: 22px;
+                    margin-bottom: 40px;
+                    max-width: 700px;
                 }
 
                 .section {
@@ -179,15 +204,35 @@ export default function Stories({ posts }) {
                     color: #666;
                 }
 
+                /* --- Buttons --- */
                 .btn {
-                    display: inline-block;
-                    margin-top: 10px;
-                    background: #007bff;
-                    color: white;
-                    padding: 8px 16px;
-                    border-radius: 30px;
+                    padding: 12px 25px;
+                    background: var(--primary-color);
+                    color: var(--white);
                     text-decoration: none;
-                    font-size: 14px;
+                    border-radius: 50px; /* Pill-shaped buttons */
+                    font-weight: 600;
+                    margin: 8px;
+                    transition: background-color var(--transition-speed), transform var(--transition-speed);
+                    display: inline-block;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                .btn:hover {
+                    background: #0056b3; /* Darker blue on hover */
+                    transform: translateY(-2px);
+                }
+
+                .btn-outline {
+                    background: transparent;
+                    color: var(--white);
+                    border: 2px solid var(--white);
+                }
+
+                .btn-outline:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                    border-color: var(--white);
                 }
 
                 .pagination {
@@ -208,6 +253,31 @@ export default function Stories({ posts }) {
                 .page-btn.active {
                     background: #007bff;
                     color: white;
+                }
+
+                /* --- Footer --- */
+                .footer {
+                    background: var(--text-color);
+                    color: var(--background-light);
+                    text-align: center;
+                    padding: 40px 20px;
+                    font-size: 14px;
+                }
+
+                /* Media Queries for responsiveness */
+                @media (max-width: 768px) {
+                    .navbar {
+                        padding: 15px 20px;
+                    }
+                    .hero h1 {
+                        font-size: 48px;
+                    }
+                    .hero p {
+                        font-size: 18px;
+                    }
+                    .section-title {
+                        font-size: 30px;
+                    }
                 }
             `}</style>
         </div>
