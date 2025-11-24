@@ -166,28 +166,34 @@ export default function Stories({ posts }) {
                     margin-bottom: 40px;
                 }
 
+               
                 .grid {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                    gap: 25px;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Larger minimum size */
+                    gap: 30px;
                 }
 
+                /* --- Card Styles (Core Feature) --- */
                 .card {
-                    background: #fff;
-                    border-radius: 12px;
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                    background: var(--white);
+                    padding: 0;
+                    border-radius: 10px;
+                    box-shadow: var(--shadow-light);
                     overflow: hidden;
-                    transition: transform 0.3s ease;
+                    text-align: left;
+                    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
                 }
 
                 .card:hover {
-                    transform: translateY(-6px);
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
                 }
 
                 .card img {
                     width: 100%;
-                    height: 200px;
+                    height: 200px; /* Fixed height for image consistency */
                     object-fit: cover;
+                    display: block;
                 }
 
                 .card-content {
@@ -195,13 +201,23 @@ export default function Stories({ posts }) {
                 }
 
                 .card h3 {
-                    margin: 0 0 10px;
+                    margin-top: 0;
+                    margin-bottom: 10px;
                     font-size: 20px;
+                    font-weight: 600;
+                    color: var(--primary-color);
                 }
 
                 .card p {
                     font-size: 14px;
-                    color: #666;
+                    color: var(--secondary-color);
+                    margin-bottom: 20px;
+                }
+
+                .card .btn {
+                    margin: 0;
+                    padding: 8px 15px;
+                    font-size: 14px;
                 }
 
                 /* --- Buttons --- */
@@ -254,6 +270,34 @@ export default function Stories({ posts }) {
                     background: #007bff;
                     color: white;
                 }
+
+                body {
+                    margin: 0;
+                    font-family: 'Poppins', sans-serif;
+                    color: var(--text-color);
+                    background: var(--background-light);
+                    line-height: 1.6;
+                }
+
+                .logo {
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: var(--primary-color);
+                    text-decoration: none;
+                }
+
+                .nav-links a {
+                    color: var(--text-color);
+                    text-decoration: none;
+                    margin-left: 25px;
+                    font-weight: 500;
+                    transition: color var(--transition-speed);
+                }
+
+                .nav-links a:hover {
+                    color: var(--primary-color);
+                }
+
 
                 /* --- Footer --- */
                 .footer {

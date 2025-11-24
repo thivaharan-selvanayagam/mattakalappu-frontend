@@ -87,6 +87,34 @@
     font-size: 14px;
 }
 
+body {
+                    margin: 0;
+                    font-family: 'Poppins', sans-serif;
+                    color: var(--text-color);
+                    background: var(--background-light);
+                    line-height: 1.6;
+                }
+
+                .logo {
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: var(--primary-color);
+                    text-decoration: none;
+                }
+
+                .nav-links a {
+                    color: var(--text-color);
+                    text-decoration: none;
+                    margin-left: 25px;
+                    font-weight: 500;
+                    transition: color var(--transition-speed);
+                }
+
+                .nav-links a:hover {
+                    color: var(--primary-color);
+                }
+
+
 @media (max-width: 900px) {
     .project-card {
         flex-direction: column !important; /* fixes reverse issue */
