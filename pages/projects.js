@@ -2,6 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
+import "../styles/projects.css";
+
 
 
 export default function Projects() {
@@ -90,7 +92,7 @@ export default function Projects() {
       </footer>
 
       {/* Component-level styles */}
-      <style jsx>{`
+      {/* <style jsx>{`
         .hero {
             background: linear-gradient(
                 rgba(0, 0, 0, 0.6),
@@ -194,7 +196,7 @@ export default function Projects() {
             }
         }
         `}
-        </style>
+        </style> */}
 
     </div>
   );

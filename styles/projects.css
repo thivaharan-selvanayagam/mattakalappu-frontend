@@ -1,0 +1,102 @@
+.hero {
+            background: linear-gradient(
+                rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.5)
+            ),
+            url("/hero.jpg") center/cover;
+            text-align: center;
+            color: var(--white);
+            padding: 120px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project-card {
+            background: var(--white);
+            box-shadow: var(--shadow-light);
+            border-radius: 12px;
+            display: flex;
+            overflow: hidden;
+            margin-bottom: 70px;
+        }
+
+        .project-card.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .project-content {
+            padding: 40px;
+            width: 50%;
+        }
+
+        .project-content h2 {
+            color: var(--primary-color);
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .project-content p {
+            color: var(--secondary-color);
+            line-height: 1.6;
+        }
+
+        .project-content ul {
+            margin-top: 20px;
+            padding-left: 20px;
+            color: var(--secondary-color);
+            font-size: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform var(--transition-speed),
+            background var(--transition-speed);
+        }
+
+        .btn:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: var(--text-color);
+            color: var(--white);
+            padding: 40px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .project-card {
+            flex-direction: column;
+            }
+
+            .project-content {
+            width: 100%;
+            }
+
+            .project-card :global(img) {
+            width: 100%;
+            }
+        }

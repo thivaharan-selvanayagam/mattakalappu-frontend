@@ -1,4 +1,21 @@
 /* NAVBAR BASE */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --text-color: #212529;
+  --background-light: #f8f9fa;
+  --white: #ffffff;
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --transition-speed: 0.3s;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--background-light);
+  color: var(--text-color);
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -63,21 +80,4 @@
     .nav-links.show {
         display: flex; /* Show when menu is open */
     }
-}
-
-:root {
-  --primary-color: #007bff;
-  --secondary-color: #6c757d;
-  --text-color: #212529;
-  --background-light: #f8f9fa;
-  --white: #ffffff;
-  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --transition-speed: 0.3s;
-}
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: var(--background-light);
-  color: var(--text-color);
 }
