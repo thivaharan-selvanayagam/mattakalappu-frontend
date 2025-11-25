@@ -239,8 +239,8 @@ with various birth stars…”</p>
           </div>
         </section>
 
-{/*        
-        <section className="section card fade-in">
+      
+        {/* <section className="section card fade-in">
           <h2>🌱 Why Support This?</h2>
           <h4>Your support directly funds:</h4>
     <ul>
@@ -262,9 +262,9 @@ with various birth stars…”</p>
           <h2>🌟 Be Part of Preserving History</h2>
           <p>Support, sponsor, collaborate or follow our journey.</p>
           <button className="cta-button">Support the Project</button>
-        </section>
+        </section> */}
 
-      </div> */}
+      </div>
       {/* --- Footer --- */}
             <footer className="footer">
                 <p>&copy; 2025 Batticaloa Heritage. All Rights Reserved. | Designed for Discovery and Preservation.</p>
