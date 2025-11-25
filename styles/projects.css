@@ -110,19 +110,7 @@ body {
                     text-decoration: none;
                 }
 
-                .nav-links a {
-                    color: var(--text-color);
-                    text-decoration: none;
-                    margin-left: 25px;
-                    font-weight: 500;
-                    transition: color var(--transition-speed);
-                }
-
-                .nav-links a:hover {
-                    color: var(--primary-color);
-                }
-
-
+              
 @media (max-width: 900px) {
     /* .project-card {
         flex-direction: column !important; 
