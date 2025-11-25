@@ -350,6 +350,13 @@ with various birth stars…”</p>
   .grid-3 {
     grid-template-columns: 1fr;
   }
+  .grid-2,
+  .grid-3 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  
 }
 /* ------------------- BENEFIT CARDS ------------------- */
 .benefit-card {

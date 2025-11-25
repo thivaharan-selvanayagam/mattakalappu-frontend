@@ -163,5 +163,15 @@ body {
      .project-content li{
         padding-right: 30px;
     }
+
+    .project-card.reverse {
+    flex-direction: column !important;
+  }
+
+    .project-card img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    }
 }
 
