@@ -76,8 +76,8 @@ export default function Home({ posts }) {
                 <h1>Unveiling the Heritage of Batticaloa</h1>
                 <p>Explore the stories, villages, culture, and history of the Eastern Jewel of Sri Lanka.</p>
                 <div>
-                    <Link className="btn" href="/posts">Explore Stories</Link>
-                    <Link className="btn btn-outline" href="#">Watch Documentaries</Link>
+                    <Link className="btn" href="/stories">Explore Stories</Link>
+                    <Link className="btn btn-outline" href="/projects">Watch Documentaries</Link>
                 </div>
             </header>
             
@@ -126,7 +126,7 @@ export default function Home({ posts }) {
                 <div className="card featured-doc-card">
                     <h3>Batticaloa Sothi – A Cultural Journey</h3>
                     <p>A beautifully captured story that explores the roots and enduring traditions of Batticaloa's people and culture.</p>
-                    <a className="btn btn-outline" href="#">Watch Now</a>
+                    <a className="btn btn-outline1" href="#">Watch Now</a>
                 </div>
             </section>
             
@@ -183,15 +183,7 @@ export default function Home({ posts }) {
             {/* 4. The Critical CSS Block (styled-jsx global) */}
             <style jsx global>{`
                 /* Modern Reset and Variables */
-                :root {
-                    --primary-color: #007bff; /* A vibrant blue */
-                    --secondary-color: #6c757d;
-                    --text-color: #212529;
-                    --background-light: #f8f9fa;
-                    --white: #ffffff;
-                    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
-                    --transition-speed: 0.3s;
-                }
+               
 
                 * {
                     box-sizing: border-box;
@@ -253,7 +245,7 @@ export default function Home({ posts }) {
                 /* --- Buttons --- */
                 .btn {
                     padding: 12px 25px;
-                    background: var(--primary-color);
+                    background: var(--button-clr);
                     color: var(--white);
                     text-decoration: none;
                     border-radius: 50px; /* Pill-shaped buttons */
@@ -266,7 +258,7 @@ export default function Home({ posts }) {
                 }
 
                 .btn:hover {
-                    background: #0056b3; /* Darker blue on hover */
+                    background: var(--hover-clr);
                     transform: translateY(-2px);
                 }
 
@@ -293,7 +285,7 @@ export default function Home({ posts }) {
                     margin-bottom: 50px;
                     font-size: 36px;
                     font-weight: 600;
-                    color: var(--text-color);
+                    color: var(--primary-color);
                     position: relative;
                 }
 
@@ -366,18 +358,29 @@ export default function Home({ posts }) {
                     margin: 0 auto;
                     text-align: center;
                     padding: 40px;
-                    background: var(--primary-color);
+                    background: linear-gradient(135deg, #ffe9d8, #fff);
                     color: var(--white);
                 }
 
                 .featured-doc-card h3 {
-                    color: var(--white);
+                    color: var(--text-color);
                     font-size: 30px;
                 }
 
                 .featured-doc-card p {
-                    color: rgba(255, 255, 255, 0.9);
+                    color: var(--text-color);
                     margin-bottom: 30px;
+                }
+
+                .btn-outline1 {
+                    background: transparent;
+                    color: var(--text-color);
+                    border: 2px solid var(--primary-color);
+                }
+
+                .btn-outline1:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                    border-color: var(--primary-color);
                 }
                 
                 /* Shop Section Cards - Cleaner Look */

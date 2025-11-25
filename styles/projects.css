@@ -83,7 +83,7 @@
 }
 
 .btn:hover {
-    background: #0056b3;
+    background: var(--hover-clr);
     transform: translateY(-2px);
 }
 

@@ -160,7 +160,7 @@ export default function Stories({ posts }) {
                     margin-bottom: 50px;
                     font-size: 36px;
                     font-weight: 600;
-                    color: var(--text-color);
+                    color: var(--primary-color);
                     position: relative;
                 }
 
@@ -230,7 +230,7 @@ export default function Stories({ posts }) {
                 /* --- Buttons --- */
                 .btn {
                     padding: 12px 25px;
-                    background: var(--primary-color);
+                    background: var(--button-clr);
                     color: var(--white);
                     text-decoration: none;
                     border-radius: 50px; /* Pill-shaped buttons */
@@ -243,7 +243,7 @@ export default function Stories({ posts }) {
                 }
 
                 .btn:hover {
-                    background: #0056b3; /* Darker blue on hover */
+                    background: var(--hover-clr);
                     transform: translateY(-2px);
                 }
 
@@ -274,7 +274,7 @@ export default function Stories({ posts }) {
                 }
 
                 .page-btn.active {
-                    background: #007bff;
+                    background: var(--primary-color);
                     color: white;
                 }
 

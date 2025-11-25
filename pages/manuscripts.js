@@ -48,7 +48,7 @@ export default function ManuscriptProject() {
 
         {/* AUDIENCE BENEFITS */}
         <section className="section">
-          <h2> Who Benefits?</h2>
+          <h2 className="section-title"> Who Benefits?</h2>
           
           <div className="grid-2">
             <div className="benefit-card fade-up">
@@ -239,25 +239,60 @@ with various birth stars…”</p>
           </div>
         </section>
 
-      
-        <section className="section card fade-in">
-          <h2>🌱 Why Support This?</h2>
-          <h4>Your support directly funds:</h4>
-    <ul>
-        <li>Field documentaries</li>
-        <li>Elder interviews</li>
-        <li>Batticaloa food culture studies</li>
-        <li>Village cultural documentation</li>
-        <li>Temple history research</li>
-        <li>Website hosting &amp; maintenance</li>
-        <li>Long-term heritage preservation efforts</li>
-    </ul>
 
-    <p>You are not buying a product &mdash;</p>
-    <p><strong>you are saving the memory of our ancestors.</strong></p>
-        </section>
+        <section class="support-section">
+              <div class="header-content">
+                  <h2 class="section-title">
+                      <span class="icon-leaf">🌿</span> Why Your Support Matters
+                  </h2>
+                  <p class="section-description">
+                      Your generosity funds critical research and long-term preservation efforts for our ancestral heritage.
+                  </p>
+              </div>
 
-       
+              <div class="grid-container">
+                  <div class="grid-item">
+                      <i class="fas fa-camera support-icon"></i>
+                      <h3 class="item-title">Field Documentaries</h3>
+                      <p class="item-caption">Capturing the living traditions of our communities.</p>
+                  </div>
+
+                  <div class="grid-item">
+                      <i class="fas fa-map-marked-alt support-icon"></i>
+                      <h3 class="item-title">Temple History Research</h3>
+                      <p class="item-caption">Uncovering the architectural and spiritual evolution of sacred sites.</p>
+                  </div>
+
+                  <div class="grid-item">
+                      <i class="fas fa-home support-icon"></i>
+                      <h3 class="item-title">Village Cultural Documentation</h3>
+                      <p class="item-caption">Preserving the stories and customs of daily village life.</p>
+                  </div>
+
+                  <div class="grid-item">
+                      <i class="fas fa-microphone-alt support-icon"></i>
+                      <h3 class="item-title">Elder Interviews</h3>
+                      <p class="item-caption">Recording invaluable first-hand histories and knowledge.</p>
+                  </div>
+
+                  <div class="grid-item">
+                      <i class="fas fa-utensils support-icon"></i>
+                      <h3 class="item-title">Batticaloa Food Culture</h3>
+                      <p class="item-caption">Documenting unique regional culinary practices.</p>
+                  </div>
+
+                  <div class="grid-item">
+                      <i class="fas fa-lock support-icon"></i>
+                      <h3 class="item-title">Long-Term Preservation</h3>
+                      <p class="item-caption">Securing the future of our digital and physical archives.</p>
+                  </div>
+              </div>
+              <hr class="separator"></hr>
+              <div class="closing-statement">
+                  You are not buying a product — you are <b>saving the memory of our ancestors.</b>
+              </div>
+          </section> 
+
         <section className="cta-section fade-in">
           <h2>🌟 Be Part of Preserving History</h2>
           <p>Support, sponsor, collaborate or follow our journey.</p>
@@ -317,6 +352,7 @@ with various birth stars…”</p>
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 25px;
+  color: var(--primary-color);
 }
 
 /* ------------------- CARDS ------------------- */
@@ -395,7 +431,7 @@ with various birth stars…”</p>
   padding: 20px 25px;
   border-radius: 12px;
   margin-bottom: 15px;
-  border-left: 4px solid #5b76ff;
+  border-left: 4px solid var(--primary-color);
 }
 
 /* ------------------- CTA ------------------- */
@@ -410,7 +446,7 @@ with various birth stars…”</p>
 .cta-button {
   margin-top: 20px;
   padding: 14px 35px;
-  background: #111;
+  background: var(--button-clr);
   color: #fff;
   border-radius: 50px;
   border: none;
@@ -420,7 +456,7 @@ with various birth stars…”</p>
 }
 
 .cta-button:hover {
-  background: #000;
+  background: var(--hover-clr);
 }
 
 /* ------------------- FADE ANIMATIONS ------------------- */

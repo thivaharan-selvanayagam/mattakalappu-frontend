@@ -8,7 +8,8 @@
   --white: #ffffff;
   --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
   --transition-speed: 0.3s;
-  --button-clr: #0F5F3D;
+  --button-clr: #2C9993;
+  --hover-clr:#247A75;
 }
 
 body {
@@ -56,6 +57,7 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+    color: var(--primary-color);
 }
 
 /* --- MOBILE VIEW --- */
