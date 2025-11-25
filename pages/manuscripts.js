@@ -240,7 +240,7 @@ with various birth stars…”</p>
         </section>
 
       
-        {/* <section className="section card fade-in">
+        <section className="section card fade-in">
           <h2>🌱 Why Support This?</h2>
           <h4>Your support directly funds:</h4>
     <ul>
@@ -262,7 +262,7 @@ with various birth stars…”</p>
           <h2>🌟 Be Part of Preserving History</h2>
           <p>Support, sponsor, collaborate or follow our journey.</p>
           <button className="cta-button">Support the Project</button>
-        </section> */}
+        </section>
 
       </div>
       {/* --- Footer --- */}
@@ -355,6 +355,10 @@ with various birth stars…”</p>
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
+  .container {
+  padding: 50px 0px;
+}
 
   
 }
