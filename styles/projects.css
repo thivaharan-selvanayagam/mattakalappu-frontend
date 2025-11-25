@@ -124,8 +124,8 @@ body {
 
 
 @media (max-width: 900px) {
-    .project-card {
-        flex-direction: column !important; /* fixes reverse issue */
+    /* .project-card {
+        flex-direction: column !important; 
     }
 
     .project-card img {
@@ -137,8 +137,25 @@ body {
 
     .project-content {
         width: 100%;
-        padding: 20px; /* reduce padding for small screens */
-    }
+        padding: 20px;
+    } */
+
+    .project-card {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .project-card img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    object-fit: cover;
+  }
+
+  .project-content {
+    width: 100% !important;
+    padding: 20px !important;
+  }
 
     .project-content p{
         padding-right: 30px;
