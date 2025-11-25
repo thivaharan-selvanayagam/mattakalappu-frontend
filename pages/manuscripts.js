@@ -187,14 +187,40 @@ export default function ManuscriptProject() {
                     <li>Suitable for researchers, collectors, and universities</li>
                 </ul>
             </div>
+            
           </div>
         </section>
+
+        {/* 🌟 NEW: YOUR SUPPORT SECTION */}
+          <section className="section">
+            <div className="project-card">
+              <img  src="/money_handle.webp" alt="Heritage Preservation" />
+              <div className="project-content">
+                <h2>How Paid Access Funds Preservation</h2>
+                <p>
+                  When you purchase the full translation, you are contributing directly to the 
+                  long-term preservation of Batticaloa’s heritage. The proceeds from the paid version 
+                  are allocated specifically to sustain and expand our cultural initiatives.
+                </p>
+                
+                <h4>&#128142; Your purchase supports:</h4>
+                <ul>
+                  <li><b>Website maintenance</b> (ensuring the free version and resources remain accessible)</li>
+                  <li><b>Field documentation</b> (interviewing elders, recording oral histories)</li>
+                  <li><b>Cultural video documentaries</b> (producing high-quality, free educational content)</li>
+                  <li><b>Heritage preservation</b> (funding long-term safeguarding of cultural artifacts and sites)</li>
+                </ul>
+                
+              </div>
+            </div>
+          </section>
+          {/* END NEW SECTION */}
 
         {/* SAMPLE TRANSLATION */}
         <section className="section">
           <h2 className="section-title"> Sample Translation</h2>
-
-          <div className="translation-sample fade-in">
+          <div className="grid-3">
+                    <div className="translation-sample fade-in">
             <h4>Old Tamil Script</h4>
             <p>“நக்ஷத்திர அடிப்படையில் உடல் நோய்களின் காரண விளக்கம்…”</p>
           </div>
@@ -209,6 +235,7 @@ export default function ManuscriptProject() {
             <h4>English</h4>
             <p>“An explanation of health conditions and traditional healing methods associated
 with various birth stars…”</p>
+          </div>
           </div>
         </section>
 
@@ -313,7 +340,17 @@ with various birth stars…”</p>
     grid-template-columns: 1fr;
   }
 }
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
 
+@media (max-width: 768px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
 /* ------------------- BENEFIT CARDS ------------------- */
 .benefit-card {
   background: #fff;

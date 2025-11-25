@@ -22,7 +22,7 @@
 
 .section {
     padding-top: 80px;
-    padding-bottom: 0px;
+    padding-bottom: 35px;
     padding-left:20px;
     padding-right:20px;
     max-width: 1200px;
@@ -35,7 +35,7 @@
     border-radius: 12px;
     display: flex;
     overflow: hidden;
-    margin-bottom: 70px;
+    /* margin-bottom: 70px; */
 }
 
 .project-card.reverse {
@@ -45,6 +45,11 @@
 .project-content {
     padding: 40px;
     width: 50%;
+}
+
+.project-card img{
+    max-width: 550px;
+    max-height: 450px;
 }
 
 .project-content h2 {
@@ -69,7 +74,7 @@
     display: inline-block;
     margin-top: 25px;
     padding: 12px 30px;
-    background: var(--primary-color);
+    background: var(--button-clr);
     color: var(--white);
     border-radius: 50px;
     text-decoration: none;
@@ -133,6 +138,13 @@ body {
     .project-content {
         width: 100%;
         padding: 20px; /* reduce padding for small screens */
+    }
+
+    .project-content p{
+        padding-right: 30px;
+    }
+     .project-content li{
+        padding-right: 30px;
     }
 }
 

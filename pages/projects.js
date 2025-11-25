@@ -51,7 +51,7 @@ export default function Projects() {
               <li>Digital Preservation & Tiered Access</li>
             </ul>
             <Link href="/manuscripts" className="btn">
-              Learn More
+              View More
             </Link>
           </div>
         </div>
