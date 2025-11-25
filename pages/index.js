@@ -178,7 +178,7 @@ export default function Home({ posts }) {
             {/* --- Footer --- */}
             <footer className="footer">
                 <p>&copy; 2025 Batticaloa Heritage. All Rights Reserved. | Designed for Discovery and Preservation.</p>
-            </footer>
+             </footer>
 
             {/* 4. The Critical CSS Block (styled-jsx global) */}
             <style jsx global>{`
@@ -204,17 +204,7 @@ export default function Home({ posts }) {
                     text-decoration: none;
                 }
 
-                .nav-links a {
-                    color: var(--text-color);
-                    text-decoration: none;
-                    margin-left: 25px;
-                    font-weight: 500;
-                    transition: color var(--transition-speed);
-                }
-
-                .nav-links a:hover {
-                    color: var(--primary-color);
-                }
+               
 
                 /* --- Hero Section --- */
                 .hero {
@@ -402,6 +392,11 @@ export default function Home({ posts }) {
                     font-size: 14px;
                 }
 
+                .footer-mobile{
+                       visibility: hidden;
+                
+                    }
+
                 /* Media Queries for responsiveness */
                 @media (max-width: 768px) {
                     .navbar {
@@ -416,6 +411,11 @@ export default function Home({ posts }) {
                     .section-title {
                         font-size: 30px;
                     }
+
+                    // .footer-mobile{
+                    //     visiblity: visible;
+                
+                    // }
                 }
             `}</style>
         </div>
