@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
+import Link from "next/link";
 
 export default function ManuscriptProject() {
   return (
@@ -21,36 +22,33 @@ export default function ManuscriptProject() {
 
       <div className="container">
 
-        {/* OVERVIEW */}
-        <section className="section card fade-in">
-          <h2>📘 Project Overview</h2>
-          <p>
-            For centuries, Batticaloa’s palm-leaf manuscripts preserved the intimate wisdom of our ancestors—
-knowledge of traditional medicine, astrology, pooja rituals, poetry, philosophy, and temple histories.</p>
+        {/* Palm Leaf Manuscripts Project overview*/}
+          <section className="section">
+            <div className="project-card">
+              <img src="/scoller.webp" alt="Palm Leaf Manuscripts" />
+              <div className="project-content">
+                <h2>Project Overview</h2>
+                <p>
+                  For centuries, Batticaloa’s palm-leaf manuscripts preserved the intimate wisdom 
+                  of our ancestors knowledge of traditional medicine, astrology, pooja rituals, 
+                  poetry, philosophy, and more. Today, many manuscripts are digitized, 
+                  but their content remains inaccessible to most people because the 
+                  old script is difficult to read. Our project unlocks this knowledge by 
+                  translating these rare palm-leaf texts.
+                </p>
+                <p><b>We are translating ancient palm-leaf manuscripts into:</b></p>
 
-<p>But today, most people have never seen these texts, and only a few elders can still read the ancient script (Paḻaiya Tamil).</p>
-
-<p>Thanks to the digitization efforts of Noolaham Foundation, these manuscripts are now safely stored.
-However, digitization alone does not unlock the knowledge.</p>
-
-<p>The sacred teachings remain trapped in a script that modern readers—and even many Tamil scholars—cannot easily understand.</p>
-<br></br>
-<h3>✨ This is where our project begins.</h3>
-
-<p>We are translating Batticaloa’s ancient palm-leaf manuscripts into:</p>
-
-<li>
-    <ul>Modern Tamil (easy-to-read)</ul>
-    <ul>English (for global access)</ul>
-</li>
-<br></br>
-<p><b>Our mission is to unlock centuries of wisdom and make the heritage of Batticaloa available to the entire world.</b></p>
-          
-        </section>
+              <ul>
+                  <li>✔ Modern Tamil (easy-to-read) </li>
+                  <li>✔ English (for global access) </li>
+              </ul>
+              </div>
+            </div>
+          </section>
 
         {/* AUDIENCE BENEFITS */}
         <section className="section">
-          <h2 className="section-title">🎯 Who Benefits?</h2>
+          <h2> Who Benefits?</h2>
           
           <div className="grid-2">
             <div className="benefit-card fade-up">
@@ -64,7 +62,7 @@ However, digitization alone does not unlock the knowledge.</p>
         <li>Translations of manuscripts on astrology, medicine, rituals, literature</li>
         <li>A meaningful way to support cultural preservation</li>
         <li>Emotional connection to ancestral memory</li>
-        <li>A personal treasure—owning ancient wisdom in a readable format</li>
+        <li>A personal treasure owning ancient wisdom in a readable format</li>
     </ul>
 
     <p>For Diaspora Tamils, this is not just a book.</p>
@@ -135,21 +133,33 @@ However, digitization alone does not unlock the knowledge.</p>
           </div>
         </section>
 
-        {/* WHAT WE DO */}
-        <section className="section card fade-in">
-          <h2>🛠 What We Actually Do</h2>
-          <ul>
-            <li>✔ Manuscripts already digitized by Noolaham</li>
-            <li>✔ Old Tamil → Modern Tamil translation</li>
-            <li>✔ Modern Tamil → English translation</li>
-            <li>✔ Word-by-word meaning + cultural notes</li>
-            <li>✔ Script comparison & research commentary</li>
-          </ul>
-        </section>
+        {/* 🛠 What We Actually Do */}
+      <section className="section">
+        <div className="project-card reverse">
+         <img src="/manuscript_digital_translation_discussion.webp" alt="Batticaloa Food Documentary" />
+          <div className="project-content">
+            <h2>What We Actually Do</h2>
+            <p>
+              We take digitized Tamil manuscripts and translate them 
+              into Modern Tamil and English. We add word-by-word meanings, 
+              cultural notes, and expert research to make these old 
+              texts fully understandable.
+            </p>
+            <ul>
+              <li>✔ Manuscripts already digitized by Noolaham Foundation </li>
+              <li>✔ Old Tamil → Modern Tamil translation</li>
+              <li>✔ Modern Tamil → English translation</li>
+              <li>✔ Word-by-word meaning + cultural and ritual context</li>
+              <li>✔ Script comparison & research commentary</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
+        
         {/* HOW WE PUBLISH */}
         <section className="section">
-          <h2 className="section-title">📚 How We Publish</h2>
+          <h2 className="section-title"> How We Publish</h2>
           
           <div className="grid-2">
             <div className="publish-card">
@@ -176,23 +186,13 @@ However, digitization alone does not unlock the knowledge.</p>
                     <li>Downloadable PDF / eBook</li>
                     <li>Suitable for researchers, collectors, and universities</li>
                 </ul>
-
-                <h2>&#128142; Your purchase supports:</h2>
-                <ul>
-                    <li>Website maintenance</li>
-                    <li>Field documentation</li>
-                    <li>Cultural video documentaries</li>
-                    <li>Heritage preservation</li>
-                </ul>
-
-                <p>&#10024; You&rsquo;re not paying for a book. You&rsquo;re helping preserve an entire culture.</p>
             </div>
           </div>
         </section>
 
         {/* SAMPLE TRANSLATION */}
         <section className="section">
-          <h2 className="section-title">📖 Sample Translation</h2>
+          <h2 className="section-title"> Sample Translation</h2>
 
           <div className="translation-sample fade-in">
             <h4>Old Tamil Script</h4>
@@ -323,6 +323,10 @@ with various birth stars…”</p>
   transition: 0.3s;
 }
 
+.benefit-card h2{
+  color: var(--primary-color);
+}
+
 .benefit-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.08);
@@ -396,6 +400,7 @@ with various birth stars…”</p>
   margin-top: 15px;
   color: #111;
 }
+
 
 /* --- Footer --- */
                 .footer {
