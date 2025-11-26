@@ -27,15 +27,15 @@ export async function getStaticProps() {
 }
 
 // --- Helper Function 1: Get Featured Image URL ---
-const getFeaturedImageUrl = (post) => {
+export const getFeaturedImageUrl = (post) => { // <-- EXPORT ADDED
     try {
         // We rely on fetchPosts using the `?_embed` parameter for this path to exist.
         const featuredMedia = post._embedded['wp:featuredmedia'][0];
         
         // Try to get the medium size for performance, fall back to full size
         const imageUrl = featuredMedia.media_details.sizes.medium.source_url 
-                         || featuredMedia.media_details.sizes.full.source_url;
-                         
+                             || featuredMedia.media_details.sizes.full.source_url;
+                             
         return imageUrl;
     } catch (e) {
         // Fallback image if no featured media is available on the post
@@ -44,7 +44,7 @@ const getFeaturedImageUrl = (post) => {
 };
 
 // --- Helper Function 2: Clean HTML from Excerpts ---
-const stripHtml = (html) => {
+export const stripHtml = (html) => { // <-- EXPORT ADDED
     if (!html) return 'No excerpt available.';
     
     // 🎯 FIX: Remove the &nbsp; entity and then strip HTML tags
@@ -103,7 +103,8 @@ export default function Home({ posts }) {
                                     <p>{stripHtml(post.excerpt.rendered).substring(0, 100)}...</p>
                                     
                                     {/* Link to the individual post page */}
-                                    <Link className="btn" href={`/posts/${post.id}`}>
+                                    {/* 💡 FIX: Changed post.id to post.slug */}
+                                    <Link className="btn" href={`/posts/${post.slug}`}>
                                         Read More
                                     </Link>
                                 </div>
@@ -183,7 +184,7 @@ export default function Home({ posts }) {
             {/* 4. The Critical CSS Block (styled-jsx global) */}
             <style jsx global>{`
                 /* Modern Reset and Variables */
-               
+                
 
                 * {
                     box-sizing: border-box;
@@ -204,7 +205,7 @@ export default function Home({ posts }) {
                     text-decoration: none;
                 }
 
-               
+                
 
                 /* --- Hero Section --- */
                 .hero {
@@ -393,7 +394,7 @@ export default function Home({ posts }) {
                 }
 
                 .footer-mobile{
-                       visibility: hidden;
+                        visibility: hidden;
                 
                     }
 

@@ -26,20 +26,20 @@ export async function getStaticProps() {
 }
 
 // ================================
-// HELPERS
+// HELPERS  <-- ADD 'export' TO BOTH FUNCTIONS HERE
 // ================================
-const getFeaturedImageUrl = (post) => {
-    try {
-        const media = post._embedded['wp:featuredmedia'][0];
-        return media.media_details.sizes.medium.source_url || media.source_url;
-    } catch (e) {
-        return 'https://placehold.co/400x200/cccccc/333333?text=Batti+Heritage';
-    }
+export const getFeaturedImageUrl = (post) => {
+    try {
+        const media = post._embedded['wp:featuredmedia'][0];
+        return media.media_details.sizes.medium.source_url || media.source_url;
+    } catch (e) {
+        return 'https://placehold.co/400x200/cccccc/333333?text=Batti+Heritage';
+    }
 };
 
-const stripHtml = (html) => {
-    if (!html) return 'No excerpt available.';
-    return html.replace(/&nbsp;/g, ' ').replace(/<[^>]*>?/gm, '');
+export const stripHtml = (html) => { // <-- EXPORTED!
+    if (!html) return 'No excerpt available.';
+    return html.replace(/&nbsp;/g, ' ').replace(/<[^>]*>?/gm, '');
 };
 
 // ================================
