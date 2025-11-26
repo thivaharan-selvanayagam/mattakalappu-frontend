@@ -9,10 +9,20 @@ export default function Projects() {
     <div>
       <Head>
         <title>Projects – Batticaloa Heritage</title>
-        <meta
-          name="description"
-          content="Cultural preservation projects of Batticaloa"
-        />
+        
+           {/* Open Graph Meta Tags */}
+                <meta property="og:title" content="Batticaloa Heritage – Projects" />
+                <meta property="og:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
+                <meta property="og:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
+                <meta property="og:url" content="https://hertiages.site/projects" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Batticaloa Heritage –  Projects" />
+                <meta name="twitter:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
+                <meta name="twitter:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
+       
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
           rel="stylesheet"

@@ -4,6 +4,20 @@ import Navbar from "../components/Navbar";
 import Link from "next/link";
 
 <head>
+
+    <title>Manuscripts | Batticaloa Heritage</title>
+     {/* Open Graph Meta Tags */}
+                <meta property="og:title" content="Batticaloa Heritage – Manuscripts" />
+                <meta property="og:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
+                <meta property="og:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
+                <meta property="og:url" content="https://hertiages.site/manuscripts" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Batticaloa Heritage – Manuscripts" />
+                <meta name="twitter:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
+                <meta name="twitter:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></link>
       
     </head>

@@ -64,7 +64,18 @@ export default function Stories({ posts }) {
         <div>
             <Head>
                 <title>Stories | Batticaloa Heritage</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                 {/* Open Graph Meta Tags */}
+                <meta property="og:title" content="Batticaloa Heritage – Stories" />
+                <meta property="og:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
+                <meta property="og:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
+                <meta property="og:url" content="https://hertiages.site/stories" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Batticaloa Heritage – Stories" />
+                <meta name="twitter:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
+                <meta name="twitter:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
             </Head>
 
             <Navbar />
@@ -73,6 +84,7 @@ export default function Stories({ posts }) {
             <header className="hero">
                 <h1>Stories of Batticaloa</h1>
                 <p>Discover history, culture and heritage through real stories.</p>
+                
             </header>
 
 
