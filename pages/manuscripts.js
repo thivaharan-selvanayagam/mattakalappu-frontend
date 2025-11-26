@@ -3,10 +3,16 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
 
+<head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></link>
+      
+    </head>
 export default function ManuscriptProject() {
   return (
+    
   <div>
     <Navbar />
+    
     <div className="project-page">
 
       {/* HERO */}
@@ -156,40 +162,59 @@ export default function ManuscriptProject() {
         </div>
       </section>
 
-        
-        {/* HOW WE PUBLISH */}
-        <section className="section">
-          <h2 className="section-title"> How We Publish</h2>
-          
-          <div className="grid-2">
-            <div className="publish-card">
-              <h3>1️⃣ Free Version – Summary</h3>
-              <h4>Inclusions:</h4>
-                <ul>
-                    <li>Brief summary of each manuscript</li>
-                    <li>Key knowledge</li>
-                    <li>Cultural explanations</li>
-                    <li>Historical notes</li>
-                </ul>
+        {/* HOW WE PUBLISH new*/}
 
-                <p>&#128142; Completely free &amp; open to the community.</p>
-            </div>
-
-            <div className="publish-card">
-              <h3>2️⃣ Paid Version – Full Translation</h3>
-              <h4>Includes:</h4>
-                <ul>
-                    <li>Full line-by-line translation</li>
-                    <li>Word meaning breakdown</li>
-                    <li>Old Tamil &rarr; Modern Tamil &rarr; English</li>
-                    <li>Notes, commentary, script comparison</li>
-                    <li>Downloadable PDF / eBook</li>
-                    <li>Suitable for researchers, collectors, and universities</li>
-                </ul>
-            </div>
+        <section class="how-we-publish">
+            <h2 class="publish-title">
+                <span class="icon-book-open">📒</span> How We Publish
+            </h2>
+            <i class="fa-regular fa-bookmark"></i>
             
-          </div>
+            <div class="publish-options-container">
+                
+                <div class="version-card free-version">
+                    <h3 class="version-header">
+                       <span class="header-icon-free">🔓</span> Free Version – Summary
+                    </h3>
+                    
+                    <p class="inclusions-label">Inclusions:</p>
+                    <ul class="inclusions-list">
+                        <li><span class="list-icon">✅</span> Brief summary of each manuscript</li>
+                        <li><span class="list-icon">✅</span> Key knowledge</li>
+                        <li><span class="list-icon">✅</span> Cultural explanations</li>
+                        <li><span class="list-icon">✅</span> Cultural explanations</li>
+                        <li><span class="list-icon">✅</span> Historical notes</li>
+                    </ul>
+                    
+                    <div class="tag-free">
+                        <span class="tag-icon">🎁</span> Completely free & open to the community.
+                    </div>
+                </div>
+                
+                <div class="version-card paid-version">
+                    <h3 class="version-header">
+                        <span class="header-icon-paid">🔒</span> Paid Version – Full Translation
+                    </h3>
+                    
+                    <p class="inclusions-label">Includes:</p>
+                    <ul class="inclusions-list">
+                        <li><span class="list-icon-paid">⭐</span> Full line-by-line translation</li>
+                        <li><span class="list-icon-paid">⭐</span> Word meaning breakdown</li>
+                        <li><span class="list-icon-paid">⭐</span> Old Tamil → Modern Tamil → English</li>
+                        <li><span class="list-icon-paid">⭐</span> Notes, commentary, script comparison</li>
+                        <li><span class="list-icon-paid">⭐</span> Downloadable PDF / eBook</li>
+                    </ul>
+                    
+                    <div class="tag-paid-audience">
+                        Suitable for researchers, collectors, and universities 
+                        <span class="shield-icon">🎖️</span>
+                    </div>
+                </div>
+                
+            </div>
         </section>
+        
+      
 
         {/* 🌟 NEW: YOUR SUPPORT SECTION */}
           <section className="section">
@@ -222,7 +247,7 @@ export default function ManuscriptProject() {
           <div className="grid-3">
                     <div className="translation-sample fade-in">
             <h4>Old Tamil Script</h4>
-            <p>“நக்ஷத்திர அடிப்படையில் உடல் நோய்களின் காரண விளக்கம்…”</p>
+            <p>“𑿅𑿇𑿗𑿘𑿙𑿚𑿛 𑿤𑿥𑿦𑿧𑿨 𑿐𑿑𑿒𑿓𑿔 𑿁𑿂𑿃𑿄…”</p>
           </div>
 
           <div className="translation-sample fade-in">

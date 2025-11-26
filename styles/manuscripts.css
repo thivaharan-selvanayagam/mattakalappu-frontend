@@ -110,6 +110,207 @@
     color: var(--primary-color);
 }
 
+
+
+/* --- General Styles for the Redesigned Section --- */
+.how-we-publish {
+    /* Set a dark background for the whole section to allow the cards to stand out */
+    background-color: #f0f4f9; /* Light grey/blue background */
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+}
+
+/* Subtle Background Text Overlay (Optional: for a 'manuscript' feel) */
+.how-we-publish::before {
+    /* content: "தமிழின் தொன்மை வரலாறு" "தமிழின் தொன்மை வரலாறு";  */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.04); /* Very light, transparent text */
+    font-size: 150px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    pointer-events: none;
+    z-index: 0; /* Keep it behind everything */
+    transform: rotate(-1deg);
+}
+
+/* Title Styling */
+.publish-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: left;
+    margin-bottom: 30px;
+    position: relative; /* Above the background text */
+    z-index: 1;
+}
+
+/* Container for the two cards */
+.publish-options-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Card Base Styles --- */
+.version-card {
+    flex: 1;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    min-width: 300px;
+}
+
+.version-card:hover {
+    transform: translateY(-5px);
+}
+
+.version-header {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.inclusions-label {
+    font-weight: 700;
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.inclusions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.inclusions-list li {
+    margin-bottom: 10px;
+    padding-left: 0; /* Remove default list padding */
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+/* --- Free Version Specific Styles --- */
+.free-version {
+    background-color: #ffffff;
+    border: 1px solid #c7d2e8;
+    color: #333;
+}
+
+.free-version .version-header {
+    color: var(--primary-color);
+}
+
+.header-icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+.list-icon {
+    color: #28a745; /* Green checkmark */
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+.tag-free {
+    text-align: center;
+    padding: 10px 15px;
+    background-color: #fffae9; /* Light blue tag background */
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid var(--green-clr);
+    display: inline-flex;
+    align-items: center;
+}
+
+.tag-icon {
+    color: var(--primary-color);
+}
+
+/* --- Paid Version Specific Styles --- */
+.paid-version {
+    background-color: #2c3e50; /* Dark blue background */
+    color: #ecf0f1; /* Light text */
+    border: 1px solid #2c3e50;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+}
+
+.paid-version .version-header {
+    color: #ffc107; /* Gold/Yellow header text */
+}
+
+.paid-version .inclusions-label {
+    color: #ecf0f1;
+}
+
+.header-icon-paid {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #ffc107;
+}
+
+.list-icon-paid {
+    color: #ffc107; /* Gold star */
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+.tag-paid-audience {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly transparent dark background */
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107; /* Gold accent line */
+    margin-top: auto; /* Push it to the bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shield-icon {
+    margin-left: 10px;
+    color: #ffc107;
+    font-size: 1.2em;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 768px) {
+    .publish-options-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        gap: 20px;
+    }
+    
+    .publish-title {
+        font-size: 2em;
+    }
+
+    .how-we-publish::before {
+        font-size: 80px;
+    }
+}
+
+
 /* Optional: Mobile Responsiveness */
 @media (max-width: 768px) {
     .grid-container {
