@@ -145,6 +145,9 @@ body {
     padding: 20px !important;
   }
 
+  .project-content h2{
+        padding-right: 30px;
+    }
     .project-content p{
         padding-right: 30px;
     }

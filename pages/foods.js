@@ -156,7 +156,7 @@ export default function FoodsProject() {
 
         <section class="how-we-publish">
             <h2 class="publish-title">
-                How We Publish the Knowledge
+                How We Publish
             </h2>
             <i class="fa-regular fa-bookmark"></i>
             
@@ -164,7 +164,7 @@ export default function FoodsProject() {
                 
                 <div class="version-card free-version">
                     <h3 class="version-header">
-                       <span class="header-icon-free">🔓</span> Free Version – Documentary Series
+                        Free Version – Documentary Series
                     </h3>
                     
                     <p class="inclusions-label">Inclusions:</p>
@@ -182,7 +182,7 @@ export default function FoodsProject() {
                 
                 <div class="version-card paid-version">
                     <h3 class="version-header">
-                        <span class="header-icon-paid">🔒</span> Paid Version – Recipe & Research Guide
+                        Paid Version – Recipe & Research Guide
                     </h3>
                     
                     <p class="inclusions-label">Includes:</p>
@@ -196,7 +196,7 @@ export default function FoodsProject() {
                     
                     <div class="tag-paid-audience">
                         Essential for serious cooks, food historians, and cultural institutions 
-                        <span class="shield-icon">🎖️</span>
+                        
                     </div>
                 </div>
                 
@@ -317,7 +317,7 @@ export default function FoodsProject() {
       </div>
       {/* --- Footer --- */}
           <footer className="footer">
-              <p>&copy; 2025 Batticaloa Heritage. All Rights Reserved. | Documenting Cultural Flavours for the Future.</p>
+              <p>&copy; 2025 Batticaloa Heritage. All Rights Reserved. | Designed for Discovery and Preservation.</p>
           </footer>
       <style jsx global>{`
 
@@ -343,8 +343,8 @@ export default function FoodsProject() {
         /* Override Hero for Food Project with a specific image */
         .food-hero-bg {
           background: linear-gradient(
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.5)
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.3)
           ),
           url("/traditional-food-cover.webp") center/cover; /* Assume you will use this image */
         }
