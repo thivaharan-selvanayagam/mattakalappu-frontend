@@ -4,13 +4,15 @@ import Navbar from "../components/Navbar";
 import Link from "next/link";
 
 <head>
+     <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flavours of Batticaloa | Batticaloa Heritage</title>
 
    {/* Open Graph Meta Tags */}
                 <meta property="og:title" content="Batticaloa Heritage – Flavours of Batticaloa" />
                 <meta property="og:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
                 <meta property="og:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
-                <meta property="og:url" content="https://hertiages.site/stories" />
+                <meta property="og:url" content="https://hertiages.site/foods" />
                 <meta property="og:type" content="website" />
 
                 {/* Twitter Card */}

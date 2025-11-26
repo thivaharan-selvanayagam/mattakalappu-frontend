@@ -67,7 +67,7 @@ export default function Home({ posts }) {
                 <title>Batticaloa Heritage – Homepage</title>
 
                 {/* Open Graph Meta Tags */}
-                <meta property="og:title" content="Batticaloa Heritage – Preserving Culture, Food & History" />
+                <meta property="og:title" content="Batticaloa Heritage – Home" />
                 <meta property="og:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
                 <meta property="og:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
                 <meta property="og:url" content="https://hertiages.site/" />
