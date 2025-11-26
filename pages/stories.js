@@ -121,7 +121,7 @@ export default function Stories({ posts }) {
             </section>
 
             <footer className="footer">
-                <p>&copy; 2025 Batticaloa Heritage. All Rights Reserved. | Designed for Discovery and Preservation.</p>
+                <p>&copy; 2018 - 2025 Batticaloa Heritage. All Rights Reserved. | Designed for Discovery and Preservation.</p>
             </footer>
 
             <style jsx global>{`
