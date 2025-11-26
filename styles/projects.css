@@ -48,7 +48,7 @@
 }
 
 .project-card img {
-    max-width: 40%; /* Image will scale up to the width of its container */
+    max-width: 45%; /* Image will scale up to the width of its container */
     height: auto;    /* Prevents distortion */
     max-height: none; /* Important: Remove the previous max-height constraint */
 }
@@ -85,6 +85,19 @@
 .btn:hover {
     background: var(--hover-clr);
     transform: translateY(-2px);
+}
+
+.project-label {
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 10px; /* Space between label and h2 */
+    background-color: #f0ad4e; /* Example color for 'future' or 'in progress' */
+    color: var(--white);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px; /* Slightly rounded corners */
 }
 
 .footer {
