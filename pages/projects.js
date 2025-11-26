@@ -74,8 +74,8 @@ export default function Projects() {
               <li>Cooking process recordings</li>
               <li>Historical & cultural background</li>
             </ul>
-            <Link href="#" className="btn">
-              Watch Trailer
+            <Link href="/foods" className="btn">
+              View More
             </Link>
           </div>
         </div>
