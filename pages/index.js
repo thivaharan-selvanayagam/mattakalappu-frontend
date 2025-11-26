@@ -3,20 +3,7 @@ import Link from 'next/link';
 // Ensure the path to your API file is correct:
 import { fetchPosts } from '../lib/api'; 
 import Navbar from "../components/Navbar";
-<head>
-    <meta property="og:title" content="Batticaloa Heritage – Preserving Culture, Food & History" />
-<meta property="og:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
-<meta property="og:image" content="https://hertiages.site/public/batticaloa-heritage-cover.webp" />
-<meta property="og:url" content="https://hertiages.site/" />
-<meta property="og:type" content="website" />
 
-<meta property="og:site_name" content="Batticaloa Heritage" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Batticaloa Heritage – Preserving Culture, Food & History" />
-<meta name="twitter:description" content="Explore the disappearing cultural traditions and food heritage of Batticaloa." />
-<meta name="twitter:image" content="https://hertiages.site/public/batticaloa-heritage-cover.webp" />
-
-</head>
 // --- 1. Data Fetching (getStaticProps) ---
 // This runs once at build time on the Vercel server.
 export async function getStaticProps() {
@@ -75,9 +62,23 @@ export default function Home({ posts }) {
         <div>
             {/* 1. Head component for external assets and metadata */}
             <Head>
-                <meta charSet="UTF-8" />
+                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>Batticaloa Heritage – Homepage</title>
+
+                {/* Open Graph Meta Tags */}
+                <meta property="og:title" content="Batticaloa Heritage – Preserving Culture, Food & History" />
+                <meta property="og:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
+                <meta property="og:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
+                <meta property="og:url" content="https://hertiages.site/" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Batticaloa Heritage – Preserving Culture, Food & History" />
+                <meta name="twitter:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
+                <meta name="twitter:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
+
                 {/* Font link */}
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
             </Head>
