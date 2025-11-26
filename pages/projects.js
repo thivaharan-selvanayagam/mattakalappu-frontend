@@ -84,8 +84,7 @@ export default function Projects() {
       {/* Footer */}
       <footer className="footer">
         <p>
-          © 2025 Batticaloa Heritage – Preserving the Culture of the Eastern
-          Jewel.
+          2025 Batticaloa Heritage. All Rights Reserved. | Designed for Discovery and Preservation.
         </p>
       </footer>
     </div>

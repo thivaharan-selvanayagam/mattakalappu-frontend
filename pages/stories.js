@@ -121,7 +121,7 @@ export default function Stories({ posts }) {
             </section>
 
             <footer className="footer">
-                <p>&copy; 2025 Batticaloa Heritage. All Rights Reserved.</p>
+                <p>&copy; 2025 Batticaloa Heritage. All Rights Reserved. | Designed for Discovery and Preservation.</p>
             </footer>
 
             <style jsx global>{`
@@ -306,15 +306,7 @@ export default function Stories({ posts }) {
                 }
 
 
-                /* --- Footer --- */
-                .footer {
-                    background: var(--text-color);
-                    color: var(--background-light);
-                    text-align: center;
-                    padding: 40px 20px;
-                    font-size: 14px;
-                }
-
+                
                 /* Media Queries for responsiveness */
                 @media (max-width: 768px) {
                     .navbar {

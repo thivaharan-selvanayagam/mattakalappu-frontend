@@ -166,7 +166,7 @@ export default function ManuscriptProject() {
 
         <section class="how-we-publish">
             <h2 class="publish-title">
-                <span class="icon-book-open">📒</span> How We Publish
+                How We Publish
             </h2>
             <i class="fa-regular fa-bookmark"></i>
             
@@ -227,8 +227,8 @@ export default function ManuscriptProject() {
                   long-term preservation of Batticaloa’s heritage. The proceeds from the paid version 
                   are allocated specifically to sustain and expand our cultural initiatives.
                 </p>
+                <h4> &#128142; Your purchase supports:</h4>
                 
-                <h4>&#128142; Your purchase supports:</h4>
                 <ul>
                   <li><b>Website maintenance</b> (ensuring the free version and resources remain accessible)</li>
                   <li><b>Field documentation</b> (interviewing elders, recording oral histories)</li>
@@ -332,195 +332,35 @@ with various birth stars…”</p>
       <style jsx global>{`
 
         /* ------------------- GLOBAL PAGE STYLE ------------------- */
-.project-page {
-  background: #f7f8fa;
-  color: #222;
-  font-family: "Inter", sans-serif;
-}
+        .project-page {
+          background: #f7f8fa;
+          color: #222;
+          font-family: "Inter", sans-serif;
+        }
 
-/* ------------------- HERO ------------------- */
-.hero {
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.5)
-    ),
-    url("/manuscript.jpg") center/cover;
-    text-align: center;
-    color: var(--white);
-    padding: 120px 20px;
-}
+        /* ------------------- HERO ------------------- */
+        .hero {
+            background: linear-gradient(
+                rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.5)
+            ),
+            url("/manuscript.jpg") center/cover;
+            text-align: center;
+            color: var(--white);
+            padding: 120px 20px;
+        }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
-}
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
 
-.hero p {
-    font-size: 20px;
-    max-width: 700px;
-    margin: 0 auto;
-}
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-/* ------------------- LAYOUT ------------------- */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 50px 20px;
-}
-
-.section {
-//   margin-bottom: 70px;
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 25px;
-  color: var(--primary-color);
-}
-
-/* ------------------- CARDS ------------------- */
-.card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  border: 1px solid #eee;
-}
-
-/* ------------------- GRID ------------------- */
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-}
-
-@media (max-width: 768px) {
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-}
-.grid-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 25px;
-}
-
-@media (max-width: 768px) {
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-  .grid-2,
-  .grid-3 {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  .container {
-  padding: 50px 0px;
-}
-
-  
-}
-/* ------------------- BENEFIT CARDS ------------------- */
-.benefit-card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 14px;
-  border: 1px solid #ececec;
-  transition: 0.3s;
-}
-
-.benefit-card h2{
-  color: var(--primary-color);
-}
-
-.benefit-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-}
-
-/* ------------------- PUBLISH CARDS ------------------- */
-.publish-card {
-  background: linear-gradient(135deg, #ffffff, #f4f5ff);
-  padding: 30px;
-  border-radius: 16px;
-  border: 1px solid #e7e7e7;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
-}
-
-/* ------------------- SAMPLE ------------------- */
-.translation-sample {
-  background: #fff;
-  padding: 20px 25px;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  border-left: 4px solid var(--primary-color);
-}
-
-/* ------------------- CTA ------------------- */
-.cta-section {
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(135deg, #ffe9d8, #fff);
-  border-radius: 20px;
-  margin-top:70px;
-}
-
-.cta-button {
-  margin-top: 20px;
-  padding: 14px 35px;
-  background: var(--button-clr);
-  color: #fff;
-  border-radius: 50px;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.cta-button:hover {
-  background: var(--hover-clr);
-}
-
-/* ------------------- FADE ANIMATIONS ------------------- */
-.fade-in {
-  animation: fadeIn 1.2s ease both;
-}
-
-.fade-up {
-  animation: fadeUp 1.2s ease both;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0 }
-  to { opacity: 1 }
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ------------------- HIGHLIGHT TEXT ------------------- */
-.highlight-text {
-  font-weight: 600;
-  margin-top: 15px;
-  color: #111;
-}
-
-
-/* --- Footer --- */
-                .footer {
-                    background: var(--text-color);
-                    color: var(--background-light);
-                    text-align: center;
-                    padding: 40px 20px;
-                    font-size: 14px;
-                }
-
-      
       `}</style>
     </div>
     </div>

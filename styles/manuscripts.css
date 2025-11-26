@@ -248,7 +248,7 @@
 
 /* --- Paid Version Specific Styles --- */
 .paid-version {
-    background-color: #2c3e50; /* Dark blue background */
+    background-color: #2c5035; /* Dark blue background */
     color: #ecf0f1; /* Light text */
     border: 1px solid #2c3e50;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow */
@@ -309,6 +309,155 @@
         font-size: 80px;
     }
 }
+
+
+/* ------------------- LAYOUT ------------------- */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--primary-color);
+}
+
+/* ------------------- CARDS ------------------- */
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border: 1px solid #eee;
+}
+
+/* ------------------- GRID ------------------- */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+@media (max-width: 768px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-2,
+  .grid-3 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .container {
+  padding: 50px 0px;
+}
+}
+  
+
+/* ------------------- BENEFIT CARDS ------------------- */
+.benefit-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #ececec;
+  transition: 0.3s;
+}
+
+.benefit-card h2{
+  color: var(--primary-color);
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+/* ------------------- PUBLISH CARDS ------------------- */
+.publish-card {
+  background: linear-gradient(135deg, #ffffff, #f4f5ff);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+}
+
+/* ------------------- SAMPLE ------------------- */
+.translation-sample {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border-left: 4px solid var(--primary-color);
+}
+
+/* ------------------- CTA ------------------- */
+.cta-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #ffe9d8, #fff);
+  border-radius: 20px;
+  margin-top:70px;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 14px 35px;
+  background: var(--button-clr);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: var(--hover-clr);
+}
+
+/* ------------------- FADE ANIMATIONS ------------------- */
+.fade-in {
+  animation: fadeIn 1.2s ease both;
+}
+
+.fade-up {
+  animation: fadeUp 1.2s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------- HIGHLIGHT TEXT ------------------- */
+.highlight-text {
+  font-weight: 600;
+  margin-top: 15px;
+  color: #111;
+}
+
+
 
 
 /* Optional: Mobile Responsiveness */
