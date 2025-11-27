@@ -50,7 +50,7 @@ export default function TradesCraftsProject() {
           {/* Project Overview (Now focused on COMPLETION and NEED) */}
           <section className="section">
             <div className="project-card">
-              <img src="/traditional-crafts-process.webp" alt="Traditional Sri Lankan Craftsman working on a pot" /> {/* UPDATED Image */}
+              <img src="/lime.webp" alt="Traditional Sri Lankan Craftsman working on a pot" /> {/* UPDATED Image */}
               <div className="project-content">
                 <h2>Project Overview: Vanishing Knowledge</h2>
                 <p>
@@ -144,7 +144,7 @@ export default function TradesCraftsProject() {
           {/* 🛠 What We Actually Did (Process section) */}
           <section className="section">
             <div className="project-card reverse">
-              <img src="/craftsmen-interview.webp" alt="Researcher interviewing a craftsman in his workshop" /> {/* UPDATED Image */}
+              <img src="/clay-bricks.webp" alt="Researcher interviewing a craftsman in his workshop" /> {/* UPDATED Image */}
               <div className="project-content">
                 <h2>Our Proven Documentation Process</h2>
                 <p>
