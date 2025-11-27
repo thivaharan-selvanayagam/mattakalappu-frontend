@@ -29,7 +29,7 @@
     margin: auto;
 }
 
-.project-card {
+.project-card, .project-card-1{
     background: var(--white);
     box-shadow: var(--shadow-light);
     border-radius: 12px;
@@ -48,7 +48,12 @@
 }
 
 .project-card img {
-    max-width: 45%; /* Image will scale up to the width of its container */
+    max-width: 40%; /* Image will scale up to the width of its container */
+    height: auto;    /* Prevents distortion */
+    max-height: none; /* Important: Remove the previous max-height constraint */
+}
+.project-card-1 img {
+    max-width: 50%; /* Image will scale up to the width of its container */
     height: auto;    /* Prevents distortion */
     max-height: none; /* Important: Remove the previous max-height constraint */
 }

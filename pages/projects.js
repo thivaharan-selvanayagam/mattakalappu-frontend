@@ -44,7 +44,7 @@ export default function Projects() {
       {/* Palm Leaf Manuscripts Project */}
       <section className="section">
         <div className="project-card">
-          <img src="/manuscript.jpg" alt="Palm Leaf Manuscripts" />
+          <img src="/manuscript.webp" alt="Palm Leaf Manuscripts" />
           <div className="project-content">
             <span className="project-label">Future Project</span>
             <h2>Palm Leaf Manuscripts Translation</h2>
@@ -71,7 +71,7 @@ export default function Projects() {
       {/* Flavours of Batticaloa Documentary */}
       <section className="section">
         <div className="project-card reverse">
-         <img src="/food.jpg" alt="Batticaloa Food Documentary" />
+         <img src="/traditional-dish.webp" alt="Batticaloa Food Documentary" />
           <div className="project-content">
             <span className="project-label">Future Project</span>
             <h2>Flavours of Batticaloa – Documentary</h2>
@@ -93,31 +93,32 @@ export default function Projects() {
         </div>
       </section>
 
+       {/* traditional crafts Documentary */}
       <section className="section">
         <div className="project-card">
           <img src="/traditional-crafts.webp" alt="Traditional Sri Lankan Craftsmen working" />
           <div className="project-content">
-            <h2>Multimedia Documentation of Traditional Trades and Crafts</h2>
-            <p>
-              Bringing the knowledge bases embedded in the traditional trades and crafts
-              of Eastern, Northern, and Up-Country Sri Lanka to Wikimedia and
-              community knowledge platforms. Many of these invaluable traditions—from 
-              shipbuilding and weaving to pottery—are under threat of being lost due to 
-              various risk factors, including modernization and lack of digital access.
-            </p>
-            <ul>
-              <li>Documentation of Indigenous Sri Lankan knowledge bases and skill-sets</li>
-              <li>Focus on <b>Eastern, Northern, and Up-Country</b> regions</li>
-              <li>Preservation of traditions like pottery, metalworking, and weaving and more</li>
-              <li>Creation of <b>Multimedia</b> content (photos, videos, articles)</li>
-              <li>Publishing to <b>Wikimedia</b> and open-access knowledge platforms</li>
-              <li>Project hosted by Noolaham foundation. collaborators are working as <b>volunteers</b></li>
-            </ul>
-            <Link href="/traditional-crafts" className="btn">
-              See our contributions
-            </Link>
-          </div>
-        </div>
+        <h2>Multimedia Documentation of Traditional Trades and Crafts</h2>
+        <p>
+          Documenting the <b>knowledge and skills</b> embedded in the traditional trades and crafts
+          of Eastern, Northern, and Up-Country Sri Lanka, and sharing them on
+          Wikimedia and open-access platforms. Many of these invaluable traditions 
+          (shipbuilding, weaving, pottery, etc.) face loss due to modernization and 
+          lack of digital access.
+        </p>
+        <ul>
+          <li>Documentation of <b>Indigenous Sri Lankan</b> knowledge and skill-sets</li>
+          <li>Focus on <b>Eastern, Northern, and Up-Country</b> regions</li>
+          <li>Preservation of traditions (pottery, metalworking, weaving, etc.)</li>
+          <li>Creation of <b>Multimedia</b> content (photos, videos, articles)</li>
+          <li>Publishing to <b>Wikimedia</b> and open-access platforms</li>
+          <li>Hosted by Noolaham foundation; collaborators work as <b>volunteers</b></li>
+        </ul>
+        <Link href="/traditional-crafts" className="btn">
+          See our contributions
+        </Link>
+      </div>
+       </div>
       </section>
 
       {/* Ancient Hindu Temple Documentation Project */}
