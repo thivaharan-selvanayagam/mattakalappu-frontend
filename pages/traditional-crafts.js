@@ -2,11 +2,12 @@
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
+import Head from 'next/head';
 
 export default function TradesCraftsProject() {
   return (
     <div>
-      <head>
+      <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Traditional Trades & Crafts Documentation | Batticaloa Heritage</title>
@@ -25,7 +26,7 @@ export default function TradesCraftsProject() {
         <meta name="twitter:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" /> {/* UPDATED Image */}
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></link>
-      </head>
+      </Head>
 
       <Navbar />
 
@@ -50,12 +51,12 @@ export default function TradesCraftsProject() {
           {/* Project Overview (Now focused on COMPLETION and NEED) */}
           <section className="section">
             <div className="project-card">
-              <img src="/traditional-crafts-process.webp" alt="Traditional Sri Lankan Craftsman working on a pot" /> {/* UPDATED Image */}
+              <img src="/crafts-college.webp" alt="Traditional Sri Lankan Craftsman working on a pot" /> {/* UPDATED Image */}
               <div className="project-content">
                 <h2>Project Overview: Vanishing Knowledge</h2>
                 <p>
-                  This completed project addressed the urgent threat of **loss of indigenous knowledge**
-                  in traditional Sri Lankan trades (e.g., pottery, metalworking, weaving, shipbuilding)
+                  This completed project addressed the urgent threat of <b>loss of indigenous knowledge</b>
+                  in traditional Sri Lankan trades (e.g., pottery, lime, weaving, wood carving)
                   due to modernization and lack of digital preservation. We successfully conducted
                   extensive fieldwork to document these practices.
                 </p>
@@ -67,106 +68,40 @@ export default function TradesCraftsProject() {
                   <li>✔ Unique regional raw materials and tools </li>
                 </ul>
                 <p>
-                  The final outputs are a comprehensive, **open-access archive** of multimedia content
+                  The final outputs are a comprehensive, <b>open-access archive</b> of multimedia content
                   available to researchers, educators, and communities worldwide.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* PROJECT RESULTS / AUDIENCE BENEFITS (REVISED FOR INVESTORS) */}
-          <section className="section" id="project-results">
-            <h2 className="section-title"> measurable results & investor value</h2>
-
-            <div className="grid-2">
-              <div className="benefit-card fade-up">
-                <h3>A. Archival and Digital Reach 📊</h3>
-                <p>We guaranteed the **long-term accessibility** of endangered cultural data.</p>
-
-                <h4>Project Deliverables Include:</h4>
-
-                <ul>
-                  <li>Over <b>1,500 High-Resolution Photos</b> uploaded to Wikimedia Commons</li>
-                  <li><b>12+ Hours of Video Interviews</b> with master craftsmen (Open Access)</li>
-                  <li>Detailed **Process Articles** in Tamil and English (available on Wikipedia)</li>
-                  <li>A <b>searchable, digitized knowledge base</b> for immediate use</li>
-                </ul>
-
-                <p>This project proves our capability to execute **large-scale digital preservation** initiatives.</p>
-              </div>
-
-              <div className="benefit-card fade-up">
-                <h3>B. Educational & Research Impact 📚</h3>
-                <p>The output directly supports **academic and vocational education** nationally and globally.</p>
-                <ul>
-                  <li>Resource for anthropologists studying South Asian material culture</li>
-                  <li>Source material for vocational institutes teaching traditional crafts</li>
-                  <li>Verified cultural content used in **Wikipedia** articles (high traffic)</li>
-                  <li>Material for teachers to create **heritage lessons** for Sri Lankan youth</li>
-                </ul>
-
-                <h4>Investor Value:</h4>
-                <ul>
-                  <li>✔ Demonstrable **Educational ROI** (Return on Impact)</li>
-                  <li>✔ Association with high-visibility, **globally accessible** platforms</li>
-                </ul>
-              </div>
-
-              <div className="benefit-card fade-up">
-                <h3>C. Community Empowerment & Legacy 🤝</h3>
-                <p>We successfully elevated the standing of local artisans and their work.</p>
-
-                <h4>Tangible Community Outcomes:</h4>
-                <ul>
-                  <li>Elders officially recognized as **Cultural Masters** in the project outputs</li>
-                  <li>Increased community pride in **regional craft heritage**</li>
-                  <li>Content promotes traditional crafts, creating potential for **cultural tourism**</li>
-                </ul>
-
-                <p>Our work delivers **authentic community-driven preservation**, establishing trust for future projects.</p>
-              </div>
-
-              <div className="benefit-card fade-up">
-                <h3>D. Future Project Foundation ✨</h3>
-                <p>This completed project serves as the **successful model** for our future documentation work.</p>
-                <h4>The project secured:</h4>
-                <ul>
-                  <li>A vetted network of **volunteer field researchers**</li>
-                  <li>Proven workflows for **remote documentation** and high-quality archiving</li>
-                  <li>Established relationships with regional cultural organizations</li>
-                </ul>
-
-                <p>This success story shows **fiscal responsibility and execution excellence** for future investment.</p>
-              </div>
-            </div>
-          </section>
+          
 
           {/* 🛠 What We Actually Did (Process section) */}
           <section className="section">
             <div className="project-card reverse">
-              <img src="/craftsmen-interview.webp" alt="Researcher interviewing a craftsman in his workshop" /> {/* UPDATED Image */}
+              <img src="/crafts-process-college.webp" alt="Researcher interviewing a craftsman in his workshop" /> {/* UPDATED Image */}
               <div className="project-content">
                 <h2>Our Proven Documentation Process</h2>
                 <p>
-                  Our methodology focuses on **rigor and archival standards**. The process involved cross-regional field trips, ethical interviews with full consent, and a focus on capturing the entire value chain—from raw material sourcing to the final product.
+                  Our methodology focuses on <b>rigor and archival standards</b>. The process involved cross-regional field trips, ethical interviews with full consent, and a focus on capturing the entire value chain—from raw material sourcing to the final product.
                 </p>
                 <ul>
                   <li>✔ <b>Identify & Vette:</b> Located and secured participation from over 30 master artisans across three regions.</li>
                   <li>✔ <b>Detailed Documentation:</b> Captured every step of the craft process with text and high-res photography.</li>
                   <li>✔ <b>Video Archiving:</b> Filmed long-form, unedited process videos for archival security.</li>
                   <li>✔ <b>Cultural Context:</b> Recorded oral histories, lineage, and the local economic significance of the craft.</li>
-                  <li>✔ <b>Final Publication:</b> All material released under **Creative Commons** licenses on open platforms.</li>
+                  <li>✔ <b>Final Publication:</b> All material released under <b>Creative Commons</b> licenses on open platforms.</li>
                 </ul>
               </div>
             </div>
           </section>
 
           {/* HOW WE PUBLISHED (Revised to showcase open access output) */}
-          <section class="how-we-publish">
+          <section id="project-results" class="how-we-publish">
             <h2 class="publish-title">
-              Project Outputs: How We Published
+              Project Outputs
             </h2>
-            <i class="fa-regular fa-bookmark"></i>
 
             <div class="publish-options-container">
 
@@ -177,8 +112,8 @@ export default function TradesCraftsProject() {
 
                 <p class="inclusions-label">Key Content Outputs:</p>
                 <ul class="inclusions-list">
-                  <li><span class="list-icon">✅</span> Thousands of Photos on **Wikimedia Commons**</li>
-                  <li><span class="list-icon">✅</span> Detailed articles on **Wikipedia** (Tamil & English)</li>
+                  <li><span class="list-icon">✅</span> 1022 Photos on  <b> Wikimedia Commons</b></li>
+                  <li><span class="list-icon">✅</span> Detailed articles on <b>Wikipedia</b> (Tamil & English)</li>
                   <li><span class="list-icon">✅</span> Raw video and audio for research use</li>
                   <li><span class="list-icon">✅</span> Documentation reports and findings</li>
                 </ul>
@@ -190,70 +125,81 @@ export default function TradesCraftsProject() {
 
               <div class="version-card paid-version">
                 <h3 class="version-header">
-                  Archival & Detailed Research Reports
+                 Project Detail Links
                 </h3>
 
-                <p class="inclusions-label">Available for Institutions & Sponsors:</p>
-                <ul class="inclusions-list">
-                  <li><span class="list-icon-paid">⭐</span> **Full, verified research reports** with methodology</li>
-                  <li><span class="list-icon-paid">⭐</span> High-definition, unedited **4K video archives**</li>
-                  <li><span class="list-icon-paid">⭐</span> Complete set of **raw data** (interview transcripts, GPS)</li>
-                  <li><span class="list-icon-paid">⭐</span> Exclusive presentation of **project metrics and impact**</li>
+                 <ul class="inclusions-list">
+                   
+                    <ul><Link href="https://ta.wikipedia.org/s/5wx5" className="btn">
+                    Project Proposal in Wikipedia
+                    </Link></ul>
+                    <ul><Link href="https://meta.wikimedia.org/wiki/Grants:Project/Tamil_Wikimedia-Noolaham_Foundation/Multimedia_Documentation_of_Traditional_Trades_and_Crafts_of_Eastern,_Northern_and_Up-Country_Sri_Lanka" className="btn">
+                    Grants for Noolaham Foundation
+                    </Link></ul>
+                    <ul><Link href="https://commons.wikimedia.org/w/index.php?title=Category:Crafts_and_Trades_of_East-North-Upcountry_Sri_Lanka&fileuntil=%E0%AE%95%E0%AE%B2%E0%AF%8D+%E0%AE%85%E0%AE%B1%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%AE%E0%AF%8D+%E0%AE%95%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%95%E0%AE%B3%E0%AF%8D.webm#mw-category-media" className="btn">
+                    Outputs in Wikimedia Commons
+                    </Link></ul>
+                    
+                    
                 </ul>
 
-                <div class="tag-paid-audience">
-                  Essential for academic partners, government bodies, and project sponsors.
+              
+              </div>
+
+            </div>
+          </section>
+
+          {/* Craft Cane Documentation Project */}
+            <section className="section">
+                <div className="project-card">
+                <img src="/cane.webp" alt="Traditional Cane Crafts" />
+                <div className="project-content">
+                    <h2>Cane Craft Documentation & Preservation</h2>
+                    <p>
+                    A comprehensive project to document the traditional methods, designs,
+                    and cultural significance of cane crafts practiced
+                    by artisans in Batticaloa regions. This initiative aims to preserve
+                    this valuable heritage for future generations.
+                    </p>
+                    <ul>
+                    <li>Detailed documentation of traditional weaving techniques</li>
+                    <li>Cataloging of historical and contemporary cane craft designs</li>
+                    <li>Video and photo documentation of the crafting process</li>
+                    <li>Interviews with master cane artisans</li>
+                    <li>Creation of educational resources for skill transfer</li>
+                    </ul>
+                    <Link href="https://commons.wikimedia.org/w/index.php?title=Category:Crafts_and_Trades_of_East-North-Upcountry_Sri_Lanka&fileuntil=%E0%AE%95%E0%AE%B2%E0%AF%8D+%E0%AE%85%E0%AE%B1%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%AE%E0%AF%8D+%E0%AE%95%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%95%E0%AE%B3%E0%AF%8D.webm#mw-category-media" className="btn">
+                    View field work photos
+                    </Link>
                 </div>
-              </div>
+                </div>
+            </section>
 
-            </div>
-          </section>
-
-          {/* 🌟 PROJECT METRICS / YOUR SUPPORT SECTION (REVISED) */}
-          <section className="section">
-            <div className="project-card">
-              <img src="/impact-metrics.webp" alt="Metrics and data charts showing project success" /> {/* UPDATED Image */}
-              <div className="project-content">
-                <h2>Project Metrics & Resource Management</h2>
-                <p>
-                  This project successfully utilized **$XX,XXX** (Insert Actual Cost) in funding to achieve its preservation goals. We prioritize efficiency and responsible use of sponsor funds to maximize cultural impact.
-                </p>
-                <h4> &#128200; Project Success Indicators:</h4>
-
-                <ul>
-                  <li><b>Scope:</b> Documented <b>12 unique crafts</b> across three major regions.</li>
-                  <li><b>Reach:</b> Project materials accessed over <b>500,000 times</b> globally in the first year.</li>
-                  <li><b>Volunteers:</b> Mobilized a core team of <b>15 committed volunteers</b> and field staff.</li>
-                  <li><b>Outputs:</b> Generated over <b>3,500 digital assets</b> (photos, videos, articles).</li>
-                  <li><b>Efficiency:</b> Completed the entire documentation phase **2 weeks ahead** of schedule.</li>
-                </ul>
-
-              </div>
-            </div>
-          </section>
-          {/* END REVISED SECTION */}
-
-          {/* SAMPLE CONTENT (REVISED) */}
-          <section className="section">
-            <h2 className="section-title"> Sample Documentation: Traditional Palmyrah Weaving</h2>
-            <div className="grid-3">
-              <div className="translation-sample fade-in">
-                <h4>Focus: Raw Material</h4>
-                <p><b>Palmyrah Focus:</b> The entire process relies on the **thinner, younger leaves** of the palmyrah palm, requiring specific drying and preparation techniques unique to the Batticaloa region.</p>
-              </div>
-
-              <div className="translation-sample fade-in">
-                <h4>Focus: Cultural Context</h4>
-                <p>“Palmyrah weaving is a female-led heritage craft, often done communally. The woven product (mats, baskets) plays an essential role in dowry and **cultural rituals** across the Eastern Province.”</p>
-              </div>
-
-              <div className="translation-sample fade-in">
-                <h4>Focus: Key Technique</h4>
-                <p>“The proper **dyeing technique** requires boiling the fiber with natural pigments (e.g., turmeric) for precisely 4 hours to ensure the vibrant, lasting colour that distinguishes a quality product.”</p>
-              </div>
-            </div>
-          </section>
-
+            {/* Pottery Craft Documentation Project */}
+      <section className="section">
+        <div className="project-card reverse">
+          <img src="/pottery.webp" alt="Traditional Pottery Crafts" />
+          <div className="project-content">
+            <h2>Traditional Pottery Documentation & Cultural Mapping</h2>
+            <p>
+              A focused initiative to document the ancient and modern techniques
+              of <b>pottery</b> as practiced by hereditary artisan
+              communities. The project captures the unique firing methods,
+              design evolution, and social context of clay work in the region.
+            </p>
+            <ul>
+              <li>Recording of clay preparation and wheel-throwing techniques</li>
+              <li>Cataloging of traditional pottery forms (e.g., cooking, storage, ritual)</li>
+              <li>Documentation of natural pigments and firing processes </li>
+              <li>Oral history collection from master potters</li>
+              <li>Digital archive of finished documentation and 3D models of artifacts</li>
+            </ul>
+            <Link href="https://youtu.be/Tap5tkAEhfE?si=HQ_-_4LbKVUstEwR" className="btn">
+              View Documentery video
+            </Link>
+          </div>
+        </div>
+      </section>
 
           <section class="support-section">
             <div class="header-content">
@@ -284,23 +230,17 @@ export default function TradesCraftsProject() {
                 <p class="item-caption">Utilizing established workflows for future, larger documentation projects.</p>
               </div>
 
-              <div class="grid-item">
-                <i class="fas fa-lightbulb support-icon"></i>
-                <h3 class="item-title">Future Focus</h3>
-                <p class="item-caption">Seeking sponsorship for our next essential initiative: **Flavours of Batticaloa**.</p>
-              </div>
-
             </div>
             <hr class="separator"></hr>
             <div class="closing-statement">
-              Invest in our **proven track record** to secure the future of Sri Lankan heritage.
+              Invest in our <b>proven track record</b> to secure the future of Sri Lankan heritage.
             </div>
           </section>
 
           <section className="cta-section fade-in">
             <h2>🤝 Invest in Our Next Project: Flavours of Batticaloa</h2>
             <p>We are seeking new partners to fund the essential fieldwork for our culinary heritage documentary.</p>
-            <Link href="/contact" className="cta-button">
+            <Link href="/contact" className="btn">
               Become a Sponsor
             </Link>
           </section>
@@ -337,7 +277,7 @@ export default function TradesCraftsProject() {
                   rgba(0, 0, 0, 0.6),
                   rgba(0, 0, 0, 0.5)
               ),
-              url("/traditional-food-cover.webp") center/cover; /* Original Placeholder */
+              url("/hero.jpg") center/cover; /* Original Placeholder */
               text-align: center;
               color: var(--white);
               padding: 120px 20px;
@@ -346,10 +286,10 @@ export default function TradesCraftsProject() {
           /* Override Hero for Crafts Project with a specific image */
           .crafts-hero-bg {
             background: linear-gradient(
-              rgba(0, 0, 0, 0.4),
-              rgba(0, 0, 0, 0.3)
+              rgba(0, 0, 0, 0.6),
+              rgba(0, 0, 0, 0.5)
             ),
-            url("/traditional-crafts.webp") center/cover; /* UPDATED Image Path */
+            url("/wood-craving.webp") center/cover; /* UPDATED Image Path */
           }
 
           .hero h1 {
