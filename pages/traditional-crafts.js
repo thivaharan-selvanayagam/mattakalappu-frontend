@@ -112,36 +112,36 @@ export default function TradesCraftsProject() {
 
                 <p class="inclusions-label">Key Content Outputs:</p>
                 <ul class="inclusions-list">
-                  <li><span class="list-icon">✅</span> 1022 Photos on  <b> Wikimedia Commons</b></li>
-                  <li><span class="list-icon">✅</span> Detailed articles on <b>Wikipedia</b> (Tamil & English)</li>
+                  <li><span class="list-icon">✅</span> 1022 Photos on Wikimedia Commons</li>
+                  <li><span class="list-icon">✅</span> Detailed articles on Wikipedia</li>
                   <li><span class="list-icon">✅</span> Raw video and audio for research use</li>
                   <li><span class="list-icon">✅</span> Documentation reports and findings</li>
                 </ul>
 
                 <div class="tag-free">
-                  <span class="tag-icon">🔗</span> All content is permanently free and citable for global use.
+                  All content is permanently free and citable for global use.
                 </div>
               </div>
 
-              <div class="version-card paid-version">
+              <div class="version-card paid-version1">
                 <h3 class="version-header">
                  Project Detail Links
                 </h3>
 
-                 <ul class="inclusions-list">
+                 {/* <ul class="inclusions-list1"> */}
                    
-                    <ul><Link href="https://ta.wikipedia.org/s/5wx5" className="btn">
-                    Project Proposal in Wikipedia
-                    </Link></ul>
-                    <ul><Link href="https://meta.wikimedia.org/wiki/Grants:Project/Tamil_Wikimedia-Noolaham_Foundation/Multimedia_Documentation_of_Traditional_Trades_and_Crafts_of_Eastern,_Northern_and_Up-Country_Sri_Lanka" className="btn">
-                    Grants for Noolaham Foundation
-                    </Link></ul>
-                    <ul><Link href="https://commons.wikimedia.org/w/index.php?title=Category:Crafts_and_Trades_of_East-North-Upcountry_Sri_Lanka&fileuntil=%E0%AE%95%E0%AE%B2%E0%AF%8D+%E0%AE%85%E0%AE%B1%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%AE%E0%AF%8D+%E0%AE%95%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%95%E0%AE%B3%E0%AF%8D.webm#mw-category-media" className="btn">
-                    Outputs in Wikimedia Commons
-                    </Link></ul>
+                   <Link href="https://ta.wikipedia.org/s/5wx5" className="btn">
+                    Trades and Craft Project Proposal in Wikipedia
+                    </Link>
+                    <Link href="https://meta.wikimedia.org/wiki/Grants:Project/Tamil_Wikimedia-Noolaham_Foundation/Multimedia_Documentation_of_Traditional_Trades_and_Crafts_of_Eastern,_Northern_and_Up-Country_Sri_Lanka" className="btn">
+                    Grants released for Noolaham Foundation
+                    </Link>
+                    <Link href="https://commons.wikimedia.org/w/index.php?title=Category:Crafts_and_Trades_of_East-North-Upcountry_Sri_Lanka&fileuntil=%E0%AE%95%E0%AE%B2%E0%AF%8D+%E0%AE%85%E0%AE%B1%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%AE%E0%AF%8D+%E0%AE%95%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%95%E0%AE%B3%E0%AF%8D.webm#mw-category-media" className="btn">
+                    Project Outputs in Wikimedia Commons
+                    </Link>
                     
                     
-                </ul>
+                {/* </ul> */}
 
               
               </div>
@@ -240,7 +240,7 @@ export default function TradesCraftsProject() {
           <section className="cta-section fade-in">
             <h2>🤝 Invest in Our Next Project: Flavours of Batticaloa</h2>
             <p>We are seeking new partners to fund the essential fieldwork for our culinary heritage documentary.</p>
-            <Link href="/contact" className="btn">
+            <Link href="https://wa.me/94766656007?text=I%27m%20interested%20in%20sponsoring%20your%20documentation%20project." className="btn">
               Become a Sponsor
             </Link>
           </section>

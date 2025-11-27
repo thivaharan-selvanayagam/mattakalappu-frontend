@@ -328,7 +328,9 @@ export default function FoodsProject() {
         <section className="cta-section fade-in">
           <h2>🌟 Taste the History. Preserve the Flavour.</h2>
           <p>Support our fieldwork, pre-order the guide, or follow the documentary series.</p>
-          <button className="cta-button">Support the Project</button>
+          <Link href="https://wa.me/94766656007?text=I%27m%20interested%20in%20sponsoring%20your%20documentation%20project." className="btn">
+              Support the Project
+            </Link>
         </section>
 
       </div>
