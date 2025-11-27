@@ -96,7 +96,7 @@ export default function Projects() {
        {/* traditional crafts Documentary */}
       <section className="section">
         <div className="project-card">
-          <img src="/traditional-crafts.webp" alt="Traditional Sri Lankan Craftsmen working" />
+          <img src="/pottery.webp" alt="Traditional Sri Lankan Craftsmen working" />
           <div className="project-content">
         <h2>Multimedia Documentation of Traditional Trades and Crafts</h2>
         <p>
