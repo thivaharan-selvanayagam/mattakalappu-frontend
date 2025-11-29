@@ -29,6 +29,10 @@
     margin: auto;
 }
 
+.section h2{
+    color:var(--primary-color);
+}
+
 .project-card, .project-card-1{
     background: var(--white);
     box-shadow: var(--shadow-light);
@@ -60,6 +64,12 @@
 .project-content h2 {
     color: var(--primary-color);
     font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.project-content h3 {
+    color: var(--primary-color);
+    font-size: 18px;
     margin-bottom: 15px;
 }
 
