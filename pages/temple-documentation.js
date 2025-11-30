@@ -7,10 +7,32 @@ import Head from 'next/head';
 // --- Placeholder Data for the Temple Project ---
 // NOTE: Replace these with your actual data
 const templesDocumented = [
-    { name: "Sivan Kovil, Mankerny", photo: "/ancient-temple-documentation.webp" },
-    { name: "Pillaiyar Kovil, Thiruchentoor", photo: "/ancient-temple-documentation.webp" },
-    { name: "Kaali Kovil, Eravur", photo: "/ancient-temple-documentation.webp" },
-    { name: "Murukan Kovil, Kalkudah", photo: "/ancient-temple-documentation.webp" },
+    { name: "Arasadichenai Pillayar kovil", photo: "/001-arasadichenai-pillayar-kovil.webp" },
+    { name: "Puthukudiyiruppu Kannaki Amman Kovil", photo: "/002-puthukudiyiruppu-kanaki-amman-kovil.webp" },
+    { name: "Puthukkudiyiruppu sri vikineswarar kovil", photo: "/003-puthukudiyiruppu-sri-vikineshwarar-kovil.webp" },
+    { name: "Sirampiyadi pillayar kovil", photo: "/004-sirampiyadi-pillayar-kovil.webp" },
+    { name: "Kirankulam kali kovil", photo: "/005-kirankulam-kali-kovil.webp" },
+    { name: "Manmunai sri narasinga vairavar kovil", photo: "/006-manmunai-sir-narasing- vairavar-kovil.webp" },
+    { name: "Manmunai kali kovil", photo: "/007-manmunai-kali-kovil.webp" },
+    { name: "ulakanachchipuram manmunai pillayar kovil", photo: "/008-ulakanachchipuram-manmunai-pillayar-kovil.webp" },
+    { name: "Valaiyiravu madaththu pillayar kovil", photo: "/009-valaiyiravu-madaththu-pillayar-kovil.svg" },
+    { name: "Naavatkaadu sri siththivinayagar kovil", photo: "/010-naavatkaadu-sri-siththivinayagar-kovil.webp" },
+    { name: "Echanthevu kannaki amman kovil", photo: "/011-echanthevu-kannaki-amman-kovil.webp" },
+    { name: "Ollikulam veerapaththirar kovil", photo: "/012-ollikulam-veerapaththirar-kovil.webp" },
+    { name: "Aanaipanthi pillayar kovil", photo: "/013 aanaipanthi pillayar kovil.webp" },
+    { name: "Echanthevu sri siththivinayagar kovil", photo: "/014 echanthevu sri siththivinayagar kovil.webp" },
+    { name: "Puliyadimadu padapaththirakali amman kovil", photo: "/015 puliyadimadu padapaththirakali amman kovil.webp" },
+    { name: "Pillayaradi sithivinayagar kovil", photo: "/016 pillayaradi sithivinayagar kovil.webp" },
+    { name: "Thalankuda thakayeswaran kovil", photo: "/017 thalankuda thakayeswaran kovil.webp" },
+    { name: "Thalankuda veerapathirar kovil", photo: "/018 thalankuda veerapathirar kovil.webp" },
+    { name: "Kurinjamunai padapaththirakaali amman kovil", photo: "/019 kurinjamunai padapaththirakaali amman kovil.webp" },
+    { name: "Paruththichchenai meenatchi amman kovil", photo: "/020 paruththichchenai meenatchi amman kovil.webp" },
+    { name: "Paruththichchenai mari amman kovil", photo: "/021 paruththichchenai mari amman kovil.webp" },
+    { name: "Sinhalavadi veerapathirar swami kovil", photo: "/022 sinhalavadi veerapathirar swami kovil.webp" },
+    { name: "Thiruchenthoor murukan kovil", photo: "/023 thiruchenthoor murukan kovil.webp" },
+    { name: "Kallady mukaththuvaram mari amman kovil", photo: "/024 kallady mukaththuvaram mari amman kovil.webp" },
+    { name: "Thiraimadu sivalinga siththivinayagar kovil", photo: "/025 thiraimadu sivalinga siththivinayagar kovil.webp" },
+    { name: "Karavetti paththirakaali amman kovil", photo: "/026 karavetti paththirakaali amman kovil.webp" },
     // Add more documented temples here (up to 8 for the 2-line grid)
 ];
 
@@ -178,18 +200,18 @@ export default function TempleDocumentationProject() {
             </div>
 
             {/* Photo Gallery Output (8 photos in 2 lines) */}
-            <div className="photo-gallery">
+            {/* <div className="photo-gallery">
               <h3>High-Resolution Photographic Archive</h3>
               <div className="photo-grid">
                 {[...Array(8)].map((_, index) => (
-                  // Replace photo-x.webp with actual image paths
+                 
                   <div key={index} className="photo-item">
                     <img src={`/temple-${index + 1}.webp`} alt={`Documented Temple Photo ${index + 1}`} />
                   </div>
                 ))}
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* 5. List of temples we documented */}
           <section className="section">
