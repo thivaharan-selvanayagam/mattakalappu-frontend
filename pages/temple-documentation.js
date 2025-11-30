@@ -200,7 +200,7 @@ export default function TempleDocumentationProject() {
             </div>
 
             {/* Photo Gallery Output (8 photos in 2 lines) */}
-            {/* <div className="photo-gallery">
+            <div className="photo-gallery">
               <h3>High-Resolution Photographic Archive</h3>
               <div className="photo-grid">
                 {[...Array(8)].map((_, index) => (
@@ -211,7 +211,7 @@ export default function TempleDocumentationProject() {
                 ))}
               </div>
             </div>
-          </section> */}
+          </section>
 
           {/* 5. List of temples we documented */}
           <section className="section">
