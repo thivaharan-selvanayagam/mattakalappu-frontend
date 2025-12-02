@@ -72,8 +72,8 @@ export default function TempleDocumentationProject() {
               Preserving the <b>Historical, Spiritual, and Architectural</b> identity of old Hindu temples
               in the Batticaloa region through comprehensive multimedia archiving.
             </p>
-            <Link href="#project-details" className="btn">
-              Explore Project Details
+            <Link href="#phase_1_completed" className="btn">
+              Explore phase I completed Temples
             </Link>
           </div>
         </section>
@@ -203,7 +203,7 @@ export default function TempleDocumentationProject() {
           </section>
 
           {/* 5. List of temples we documented */}
-          <section className="section">
+          <section className="section" id="phase_1_completed">
             <h2>5. 📜 Temples Documented in Phase I</h2>
             <p>
               The first phase focused on recording four critically important temples known for their unique <b>Sthala Purāṇams</b> and architectural styles.
