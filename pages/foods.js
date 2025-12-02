@@ -1,33 +1,36 @@
 "use client";
+import Head from "next/head"; // <-- 1. Import Head
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
 
-<head>
-     <meta charSet="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flavours of Batticaloa | Batticaloa Heritage</title>
-
-   {/* Open Graph Meta Tags */}
-                <meta property="og:title" content="Batticaloa Heritage – Flavours of Batticaloa" />
-                <meta property="og:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
-                <meta property="og:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
-                <meta property="og:url" content="https://hertiages.site/foods" />
-                <meta property="og:type" content="website" />
-
-                {/* Twitter Card */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Batticaloa Heritage – Flavours of Batticaloa" />
-                <meta name="twitter:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
-                <meta name="twitter:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
-
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></link>
-      
-    </head>
 export default function FoodsProject() {
   return (
     
   <div>
+    {/* 2. CORRECTED: Use the <Head> component for all meta tags */}
+    <Head>
+      <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Flavours of Batticaloa | Batticaloa Heritage</title>
+
+      {/* Open Graph Meta Tags (For WhatsApp, Facebook, etc.) */}
+      <meta property="og:title" content="Batticaloa Heritage – Flavours of Batticaloa" />
+      <meta property="og:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
+      <meta property="og:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
+      <meta property="og:url" content="https://hertiages.site/foods" />
+      <meta property="og:type" content="website" />
+
+      {/* Twitter Card (Good Practice) */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Batticaloa Heritage – Flavours of Batticaloa" />
+      <meta name="twitter:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
+      <meta name="twitter:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" />
+
+      {/* External CSS Link */}
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </Head>
+    
     <Navbar />
     
     <div className="project-page">
@@ -81,137 +84,137 @@ export default function FoodsProject() {
 
 <h4>This project offers them:</h4>
 
-    <ul>
-        <li>Authentic, step-by-step video guides and written recipes</li>
-        <li>A direct connection to ancestral flavours and traditions</li>
-        <li>Preserved knowledge of traditional ingredients and their health benefits</li>
-        <li>A meaningful way to teach the next generation</li>
-        <li>The full, cultural story behind every dish</li>
-    </ul>
+  <ul>
+    <li>Authentic, step-by-step video guides and written recipes</li>
+    <li>A direct connection to ancestral flavours and traditions</li>
+    <li>Preserved knowledge of traditional ingredients and their health benefits</li>
+    <li>A meaningful way to teach the next generation</li>
+    <li>The full, cultural story behind every dish</li>
+  </ul>
 
-    <p>This is more than a cookbook—it is a <b>culinary memory bank.</b></p>
+  <p>This is more than a cookbook—it is a <b>culinary memory bank.</b></p>
             </div>
 
             <div className="benefit-card fade-up">
               <h3>B. Chefs & Food Researchers</h3>
-    <ul>
-        <li>Anthropologists studying South Asian culinary history</li>
-        <li>Restaurateurs seeking authentic regional dishes</li>
-        <li>Documentary filmmakers and cultural journalists</li>
-        <li>Nutritionists studying ancient dietary practices</li>
-    </ul>
+            <ul>
+              <li>Anthropologists studying South Asian culinary history</li>
+              <li>Restaurateurs seeking authentic regional dishes</li>
+              <li>Documentary filmmakers and cultural journalists</li>
+              <li>Nutritionists studying ancient dietary practices</li>
+            </ul>
 
-    <h4>We provide:</h4>
-    <ul>
-        <li>&#10004; Detailed <b>ingredient lists and measurements</b></li>
-        <li>&#10004; High-definition video recording of cooking processes</li>
-        <li>&#10004; Contextual notes on festivals, rituals, and food pairings</li>
-        <li>&#10004; Verified oral histories from the source</li>
-    </ul>
+            <h4>We provide:</h4>
+            <ul>
+              <li>&#10004; Detailed <b>ingredient lists and measurements</b></li>
+              <li>&#10004; High-definition video recording of cooking processes</li>
+              <li>&#10004; Contextual notes on festivals, rituals, and food pairings</li>
+              <li>&#10004; Verified oral histories from the source</li>
+            </ul>
 
-    <p>Researchers gain immediate access to <b>primary, validated cultural data</b> for their work.</p>
+            <p>Researchers gain immediate access to <b>primary, validated cultural data</b> for their work.</p>
             </div>
 
             <div className="benefit-card fade-up">
               <h3>C. Cultural Enthusiasts</h3>
               <p>Anyone who cherishes the diversity and history of food.</p>
 
-    <h4>Enthusiasts enjoy:</h4>
-    <ul>
-        <li>High-quality, free-access short-form documentary videos</li>
-        <li>Behind-the-scenes interviews with local culinary masters</li>
-        <li>Insights into the history of staple ingredients (e.g., Samba Rice, Lagoon Fish)</li>
-        <li>Discovering unique, regional-specific cooking styles</li>
-    </ul>
+            <h4>Enthusiasts enjoy:</h4>
+            <ul>
+              <li>High-quality, free-access short-form documentary videos</li>
+              <li>Behind-the-scenes interviews with local culinary masters</li>
+              <li>Insights into the history of staple ingredients (e.g., Samba Rice, Lagoon Fish)</li>
+              <li>Discovering unique, regional-specific cooking styles</li>
+            </ul>
 
-    <p>Our documentation <b>turns recipes into history lessons</b>, adding depth and context.</p>
+            <p>Our documentation <b>turns recipes into history lessons</b>, adding depth and context.</p>
             </div>
 
             <div className="benefit-card fade-up">
               <h3>D. Local Community & Elders</h3>
               <h4>The project ensures the legacy of:</h4>
-    <ul>
-        <li>Traditional knowledge is respected and recorded accurately</li>
-        <li>Elders are recognized as cultural masters</li>
-        <li>A new generation is educated on their heritage</li>
-        <li>Recipes remain accessible for future community use</li>
-    </ul>
+            <ul>
+              <li>Traditional knowledge is respected and recorded accurately</li>
+              <li>Elders are recognized as cultural masters</li>
+              <li>A new generation is educated on their heritage</li>
+              <li>Recipes remain accessible for future community use</li>
+            </ul>
 
-    <h4>Impact for Locals:</h4>
-    <ul>
-        <li>Authentic cultural preservation</li>
-        <li>Increased pride in regional cuisine</li>
-        <li>Opportunity for cultural tourism development</li>
-    </ul>
+            <h4>Impact for Locals:</h4>
+            <ul>
+              <li>Authentic cultural preservation</li>
+              <li>Increased pride in regional cuisine</li>
+              <li>Opportunity for cultural tourism development</li>
+            </ul>
 
-    <p>We are creating a valuable community archive to secure their culinary identity.</p>
+            <p>We are creating a valuable community archive to secure their culinary identity.</p>
             </div>
           </div>
         </section>
 
         {/* 🛠 What We Actually Do */}
-      <section className="section">
-        <div className="project-card reverse">
-         <img src="/recipe-interview.webp" alt="Elder being interviewed about a traditional recipe" />
-          <div className="project-content">
-            <h2>Our Documentation Process</h2>
-            <p>
-              Our team works closely with knowledgeable elders in various Batticaloa villages. The process involves respectful one-on-one video interviews, careful measurement of ingredients, and high-quality filming of the entire preparation, cooking, and serving process.
-            </p>
-            <ul>
-              <li>✔ <b>Identify & Interview:</b> Locate elders who hold rare recipe knowledge.</li>
-              <li>✔ <b>Detailed Documentation:</b> Record exact ingredients and preparation steps.</li>
-              <li>✔ <b>Video Recording:</b> Film the cooking process with professional quality.</li>
-              <li>✔ <b>Cultural Context:</b> Capture oral histories, proverbs, and rituals associated with the food.</li>
-              <li>✔ <b>Post-Production:</b> Produce a free documentary and a paid detailed recipe book/guide.</li>
-            </ul>
+        <section className="section">
+          <div className="project-card reverse">
+           <img src="/recipe-interview.webp" alt="Elder being interviewed about a traditional recipe" />
+            <div className="project-content">
+              <h2>Our Documentation Process</h2>
+              <p>
+                Our team works closely with knowledgeable elders in various Batticaloa villages. The process involves respectful one-on-one video interviews, careful measurement of ingredients, and high-quality filming of the entire preparation, cooking, and serving process.
+              </p>
+              <ul>
+                <li>✔ <b>Identify & Interview:</b> Locate elders who hold rare recipe knowledge.</li>
+                <li>✔ <b>Detailed Documentation:</b> Record exact ingredients and preparation steps.</li>
+                <li>✔ <b>Video Recording:</b> Film the cooking process with professional quality.</li>
+                <li>✔ <b>Cultural Context:</b> Capture oral histories, proverbs, and rituals associated with the food.</li>
+                <li>✔ <b>Post-Production:</b> Produce a free documentary and a paid detailed recipe book/guide.</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* HOW WE PUBLISH new*/}
 
-        <section class="how-we-publish">
-            <h2 class="publish-title">
+        <section className="how-we-publish">
+            <h2 className="publish-title">
                 How We Publish
             </h2>
-            <i class="fa-regular fa-bookmark"></i>
+            <i className="fa-regular fa-bookmark"></i>
             
-            <div class="publish-options-container">
+            <div className="publish-options-container">
                 
-                <div class="version-card free-version">
-                    <h3 class="version-header">
+                <div className="version-card free-version">
+                    <h3 className="version-header">
                         Free Version – Documentary Series
                     </h3>
                     
-                    <p class="inclusions-label">Inclusions:</p>
-                    <ul class="inclusions-list">
-                        <li><span class="list-icon">✅</span> Short-form episodes of the documentary</li>
-                        <li><span class="list-icon">✅</span> Featured interview excerpts with elders</li>
-                        <li><span class="list-icon">✅</span> Highlights of cooking methods</li>
-                        <li><span class="list-icon">✅</span> Cultural context and historical background</li>
+                    <p className="inclusions-label">Inclusions:</p>
+                    <ul className="inclusions-list">
+                        <li><span className="list-icon">✅</span> Short-form episodes of the documentary</li>
+                        <li><span className="list-icon">✅</span> Featured interview excerpts with elders</li>
+                        <li><span className="list-icon">✅</span> Highlights of cooking methods</li>
+                        <li><span className="list-icon">✅</span> Cultural context and historical background</li>
                     </ul>
                     
-                    <div class="tag-free">
-                        <span class="tag-icon">🎁</span> Completely free on YouTube and public platforms.
+                    <div className="tag-free">
+                        <span className="tag-icon">🎁</span> Completely free on YouTube and public platforms.
                     </div>
                 </div>
                 
-                <div class="version-card paid-version">
-                    <h3 class="version-header">
+                <div className="version-card paid-version">
+                    <h3 className="version-header">
                         Paid Version – Recipe & Research Guide
                     </h3>
                     
-                    <p class="inclusions-label">Includes:</p>
-                    <ul class="inclusions-list">
-                        <li><span class="list-icon-paid">⭐</span> Full, verified, and measured recipes</li>
-                        <li><span class="list-icon-paid">⭐</span> Detailed ingredient breakdown and sourcing</li>
-                        <li><span class="list-icon-paid">⭐</span> Complete video footage of the cooking process</li>
-                        <li><span class="list-icon-paid">⭐</span> Exclusive extended interviews and research commentary</li>
-                        <li><span class="list-icon-paid">⭐</span> Downloadable PDF / eBook / High-Res Video</li>
+                    <p className="inclusions-label">Includes:</p>
+                    <ul className="inclusions-list">
+                        <li><span className="list-icon-paid">⭐</span> Full, verified, and measured recipes</li>
+                        <li><span className="list-icon-paid">⭐</span> Detailed ingredient breakdown and sourcing</li>
+                        <li><span className="list-icon-paid">⭐</span> Complete video footage of the cooking process</li>
+                        <li><span className="list-icon-paid">⭐</span> Exclusive extended interviews and research commentary</li>
+                        <li><span className="list-icon-paid">⭐</span> Downloadable PDF / eBook / High-Res Video</li>
                     </ul>
                     
-                    <div class="tag-paid-audience">
+                    <div className="tag-paid-audience">
                         Essential for serious cooks, food historians, and cultural institutions 
                         
                     </div>
@@ -265,62 +268,62 @@ export default function FoodsProject() {
             <div className="translation-sample fade-in">
               <h4>Key Technique Highlight</h4>
               <p>“The proper method involves steaming the Puttu <b>before</b> incorporating 
-              the prawn curry, ensuring the rice flour remains fluffy and absorbs 
-              the gravy without becoming dense.”</p>
+                the prawn curry, ensuring the rice flour remains fluffy and absorbs 
+                the gravy without becoming dense.”</p>
             </div>
           </div>
         </section>
 
 
-        <section class="support-section">
-              <div class="header-content">
-                  <h2 class="section-title">
-                      <span class="icon-leaf">🌿</span> Why Your Support Matters
+        <section className="support-section">
+              <div className="header-content">
+                  <h2 className="section-title">
+                      <span className="icon-leaf">🌿</span> Why Your Support Matters
                   </h2>
-                  <p class="section-description">
+                  <p className="section-description">
                       Your generosity funds the critical fieldwork needed to record and archive the living heritage of Batticaloa’s food culture.
                   </p>
               </div>
 
-              <div class="grid-container">
-                  <div class="grid-item">
-                      <i class="fas fa-video support-icon"></i>
-                      <h3 class="item-title">Documentary Filming</h3>
-                      <p class="item-caption">Capturing the complex cooking processes in high definition.</p>
+              <div className="grid-container">
+                  <div className="grid-item">
+                      <i className="fas fa-video support-icon"></i>
+                      <h3 className="item-title">Documentary Filming</h3>
+                      <p className="item-caption">Capturing the complex cooking processes in high definition.</p>
                   </div>
 
-                  <div class="grid-item">
-                      <i class="fas fa-utensils support-icon"></i>
-                      <h3 class="item-title">Recipe Documentation</h3>
-                      <p class="item-caption">Precise measurement and verification of ingredients for accuracy.</p>
+                  <div className="grid-item">
+                      <i className="fas fa-utensils support-icon"></i>
+                      <h3 className="item-title">Recipe Documentation</h3>
+                      <p className="item-caption">Precise measurement and verification of ingredients for accuracy.</p>
                   </div>
 
-                  <div class="grid-item">
-                      <i class="fas fa-map-marker-alt support-icon"></i>
-                      <h3 class="item-title">Fieldwork Logistics</h3>
-                      <p class="item-caption">Enabling our team to reach remote villages for interviews.</p>
+                  <div className="grid-item">
+                      <i className="fas fa-map-marker-alt support-icon"></i>
+                      <h3 className="item-title">Fieldwork Logistics</h3>
+                      <p className="item-caption">Enabling our team to reach remote villages for interviews.</p>
                   </div>
 
-                  <div class="grid-item">
-                      <i class="fas fa-microphone support-icon"></i>
-                      <h3 class="item-title">Elder Interviews</h3>
-                      <p class="item-caption">Recording invaluable first-hand oral histories and food origins.</p>
+                  <div className="grid-item">
+                      <i className="fas fa-microphone support-icon"></i>
+                      <h3 className="item-title">Elder Interviews</h3>
+                      <p className="item-caption">Recording invaluable first-hand oral histories and food origins.</p>
                   </div>
 
-                  <div class="grid-item">
-                      <i class="fas fa-archive support-icon"></i>
-                      <h3 class="item-title">Digital Archiving</h3>
-                      <p class="item-caption">Securing the long-term preservation of all video and written records.</p>
+                  <div className="grid-item">
+                      <i className="fas fa-archive support-icon"></i>
+                      <h3 className="item-title">Digital Archiving</h3>
+                      <p className="item-caption">Securing the long-term preservation of all video and written records.</p>
                   </div>
 
-                  <div class="grid-item">
-                      <i class="fas fa-hands-helping support-icon"></i>
-                      <h3 class="item-title">Community Support</h3>
-                      <p class="item-caption">Providing respectful remuneration to the elders for their time and wisdom.</p>
+                  <div className="grid-item">
+                      <i className="fas fa-hands-helping support-icon"></i>
+                      <h3 className="item-title">Community Support</h3>
+                      <p className="item-caption">Providing respectful remuneration to the elders for their time and wisdom.</p>
                   </div>
               </div>
-              <hr class="separator"></hr>
-              <div class="closing-statement">
+              <hr className="separator"></hr>
+              <div className="closing-statement">
                   You are not buying a product — you are <b>saving a vanishing culture from extinction.</b>
               </div>
           </section> 

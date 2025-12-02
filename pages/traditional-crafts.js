@@ -2,17 +2,18 @@
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
-import Head from 'next/head';
+import Head from 'next/head'; // Correctly imported
 
 export default function TradesCraftsProject() {
   return (
     <div>
+      {/* Metadata is correctly placed inside the Head component from 'next/head' */}
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Traditional Trades & Crafts Documentation | Batticaloa Heritage</title>
 
-        {/* Open Graph Meta Tags */}
+        {/* Open Graph Meta Tags (This section is essential for WhatsApp preview) */}
         <meta property="og:title" content="Batticaloa Heritage – Traditional Trades & Crafts" />
         <meta property="og:description" content="A completed multimedia documentation project preserving the traditional knowledge and skills of Eastern, Northern, and Up-Country Sri Lanka." />
         <meta property="og:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" /> {/* UPDATED Image */}
@@ -55,7 +56,7 @@ export default function TradesCraftsProject() {
               <div className="project-content">
                 <h2>Project Overview: Vanishing Knowledge</h2>
                 <p>
-                  This completed project addressed the urgent threat of <b>loss of indigenous knowledge</b>
+                  This completed project addressed the urgent threat of **loss of indigenous knowledge**
                   in traditional Sri Lankan trades (e.g., pottery, lime, weaving, wood carving)
                   due to modernization and lack of digital preservation. We successfully conducted
                   extensive fieldwork to document these practices.
@@ -68,14 +69,13 @@ export default function TradesCraftsProject() {
                   <li>✔ Unique regional raw materials and tools </li>
                 </ul>
                 <p>
-                  The final outputs are a comprehensive, <b>open-access archive</b> of multimedia content
+                  The final outputs are a comprehensive, **open-access archive** of multimedia content
                   available to researchers, educators, and communities worldwide.
                 </p>
               </div>
             </div>
           </section>
 
-          
 
           {/* 🛠 What We Actually Did (Process section) */}
           <section className="section">
@@ -84,63 +84,63 @@ export default function TradesCraftsProject() {
               <div className="project-content">
                 <h2>Our Proven Documentation Process</h2>
                 <p>
-                  Our methodology focuses on <b>rigor and archival standards</b>. The process involved cross-regional field trips, ethical interviews with full consent, and a focus on capturing the entire value chain—from raw material sourcing to the final product.
+                  Our methodology focuses on **rigor and archival standards**. The process involved cross-regional field trips, ethical interviews with full consent, and a focus on capturing the entire value chain—from raw material sourcing to the final product.
                 </p>
                 <ul>
-                  <li>✔ <b>Identify & Vette:</b> Located and secured participation from over 30 master artisans across three regions.</li>
-                  <li>✔ <b>Detailed Documentation:</b> Captured every step of the craft process with text and high-res photography.</li>
-                  <li>✔ <b>Video Archiving:</b> Filmed long-form, unedited process videos for archival security.</li>
-                  <li>✔ <b>Cultural Context:</b> Recorded oral histories, lineage, and the local economic significance of the craft.</li>
-                  <li>✔ <b>Final Publication:</b> All material released under <b>Creative Commons</b> licenses on open platforms.</li>
+                  <li>✔ **Identify & Vette:** Located and secured participation from over 30 master artisans across three regions.</li>
+                  <li>✔ **Detailed Documentation:** Captured every step of the craft process with text and high-res photography.</li>
+                  <li>✔ **Video Archiving:** Filmed long-form, unedited process videos for archival security.</li>
+                  <li>✔ **Cultural Context:** Recorded oral histories, lineage, and the local economic significance of the craft.</li>
+                  <li>✔ **Final Publication:** All material released under **Creative Commons** licenses on open platforms.</li>
                 </ul>
               </div>
             </div>
           </section>
 
           {/* HOW WE PUBLISHED (Revised to showcase open access output) */}
-          <section id="project-results" class="how-we-publish">
-            <h2 class="publish-title">
+          <section id="project-results" className="how-we-publish">
+            <h2 className="publish-title">
               Project Outputs
             </h2>
 
-            <div class="publish-options-container">
+            <div className="publish-options-container">
 
-              <div class="version-card free-version">
-                <h3 class="version-header">
+              <div className="version-card free-version">
+                <h3 className="version-header">
                   Open-Access Content on Wikimedia
                 </h3>
 
-                <p class="inclusions-label">Key Content Outputs:</p>
-                <ul class="inclusions-list">
-                  <li><span class="list-icon">✅</span> 1022 Photos on Wikimedia Commons</li>
-                  <li><span class="list-icon">✅</span> Detailed articles on Wikipedia</li>
-                  <li><span class="list-icon">✅</span> Raw video and audio for research use</li>
-                  <li><span class="list-icon">✅</span> Documentation reports and findings</li>
+                <p className="inclusions-label">Key Content Outputs:</p>
+                <ul className="inclusions-list">
+                  <li><span className="list-icon">✅</span> 1022 Photos on Wikimedia Commons</li>
+                  <li><span className="list-icon">✅</span> Detailed articles on Wikipedia</li>
+                  <li><span className="list-icon">✅</span> Raw video and audio for research use</li>
+                  <li><span className="list-icon">✅</span> Documentation reports and findings</li>
                 </ul>
 
-                <div class="tag-free">
+                <div className="tag-free">
                   All content is permanently free and citable for global use.
                 </div>
               </div>
 
-              <div class="version-card paid-version1">
-                <h3 class="version-header">
-                 Project Detail Links
+              <div className="version-card paid-version1">
+                <h3 className="version-header">
+                  Project Detail Links
                 </h3>
 
-                 {/* <ul class="inclusions-list1"> */}
-                   
-                   <Link href="https://ta.wikipedia.org/s/5wx5" className="btn">
+                {/* <ul class="inclusions-list1"> */}
+                  
+                  <Link href="https://ta.wikipedia.org/s/5wx5" className="btn">
                     Trades and Craft Project Proposal in Wikipedia
-                    </Link>
-                    <Link href="https://meta.wikimedia.org/wiki/Grants:Project/Tamil_Wikimedia-Noolaham_Foundation/Multimedia_Documentation_of_Traditional_Trades_and_Crafts_of_Eastern,_Northern_and_Up-Country_Sri_Lanka" className="btn">
+                  </Link>
+                  <Link href="https://meta.wikimedia.org/wiki/Grants:Project/Tamil_Wikimedia-Noolaham_Foundation/Multimedia_Documentation_of_Traditional_Trades_and_Crafts_of_Eastern,_Northern_and_Up-Country_Sri_Lanka" className="btn">
                     Grants released for Noolaham Foundation
-                    </Link>
-                    <Link href="https://commons.wikimedia.org/w/index.php?title=Category:Crafts_and_Trades_of_East-North-Upcountry_Sri_Lanka&fileuntil=%E0%AE%95%E0%AE%B2%E0%AF%8D+%E0%AE%85%E0%AE%B1%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%AE%E0%AF%8D+%E0%AE%95%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%95%E0%AE%B3%E0%AF%8D.webm#mw-category-media" className="btn">
+                  </Link>
+                  <Link href="https://commons.wikimedia.org/w/index.php?title=Category:Crafts_and_Trades_of_East-North-Upcountry_Sri_Lanka&fileuntil=%E0%AE%95%E0%AE%B2%E0%AF%8D+%E0%AE%85%E0%AE%B1%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%AE%E0%AF%8D+%E0%AE%95%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%95%E0%AE%B3%E0%AF%8D.webm#mw-category-media" className="btn">
                     Project Outputs in Wikimedia Commons
-                    </Link>
-                    
-                    
+                  </Link>
+                  
+                  
                 {/* </ul> */}
 
               
@@ -154,86 +154,86 @@ export default function TradesCraftsProject() {
                 <div className="project-card">
                 <img src="/cane.webp" alt="Traditional Cane Crafts" />
                 <div className="project-content">
-                    <h2>Cane Craft Documentation & Preservation</h2>
-                    <p>
+                  <h2>Cane Craft Documentation & Preservation</h2>
+                  <p>
                     A comprehensive project to document the traditional methods, designs,
                     and cultural significance of cane crafts practiced
                     by artisans in Batticaloa regions. This initiative aims to preserve
                     this valuable heritage for future generations.
-                    </p>
-                    <ul>
-                    <li>Detailed documentation of traditional weaving techniques</li>
-                    <li>Cataloging of historical and contemporary cane craft designs</li>
-                    <li>Video and photo documentation of the crafting process</li>
-                    <li>Interviews with master cane artisans</li>
-                    <li>Creation of educational resources for skill transfer</li>
-                    </ul>
-                    <Link href="https://commons.wikimedia.org/w/index.php?title=Category:Crafts_and_Trades_of_East-North-Upcountry_Sri_Lanka&fileuntil=%E0%AE%95%E0%AE%B2%E0%AF%8D+%E0%AE%85%E0%AE%B1%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%AE%E0%AF%8D+%E0%AE%95%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%95%E0%AE%B3%E0%AF%8D.webm#mw-category-media" className="btn">
+                  </p>
+                  <ul>
+                  <li>Detailed documentation of traditional weaving techniques</li>
+                  <li>Cataloging of historical and contemporary cane craft designs</li>
+                  <li>Video and photo documentation of the crafting process</li>
+                  <li>Interviews with master cane artisans</li>
+                  <li>Creation of educational resources for skill transfer</li>
+                  </ul>
+                  <Link href="https://commons.wikimedia.org/w/index.php?title=Category:Crafts_and_Trades_of_East-North-Upcountry_Sri_Lanka&fileuntil=%E0%AE%95%E0%AE%B2%E0%AF%8D+%E0%AE%85%E0%AE%B1%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%AE%E0%AF%8D+%E0%AE%95%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%95%E0%AE%B3%E0%AF%8D.webm#mw-category-media" className="btn">
                     View field work photos
-                    </Link>
+                  </Link>
                 </div>
                 </div>
             </section>
 
             {/* Pottery Craft Documentation Project */}
-      <section className="section">
-        <div className="project-card reverse">
-          <img src="/pottery.webp" alt="Traditional Pottery Crafts" />
-          <div className="project-content">
-            <h2>Traditional Pottery Documentation & Cultural Mapping</h2>
-            <p>
-              A focused initiative to document the ancient and modern techniques
-              of <b>pottery</b> as practiced by hereditary artisan
-              communities. The project captures the unique firing methods,
-              design evolution, and social context of clay work in the region.
-            </p>
-            <ul>
-              <li>Recording of clay preparation and wheel-throwing techniques</li>
-              <li>Cataloging of traditional pottery forms (e.g., cooking, storage, ritual)</li>
-              <li>Documentation of natural pigments and firing processes </li>
-              <li>Oral history collection from master potters</li>
-              <li>Digital archive of finished documentation and 3D models of artifacts</li>
-            </ul>
-            <Link href="https://youtu.be/Tap5tkAEhfE?si=HQ_-_4LbKVUstEwR" className="btn">
-              View Documentery video
-            </Link>
-          </div>
-        </div>
-      </section>
+          <section className="section">
+            <div className="project-card reverse">
+              <img src="/pottery.webp" alt="Traditional Pottery Crafts" />
+              <div className="project-content">
+                <h2>Traditional Pottery Documentation & Cultural Mapping</h2>
+                <p>
+                  A focused initiative to document the ancient and modern techniques
+                  of **pottery** as practiced by hereditary artisan
+                  communities. The project captures the unique firing methods,
+                  design evolution, and social context of clay work in the region.
+                </p>
+                <ul>
+                  <li>Recording of clay preparation and wheel-throwing techniques</li>
+                  <li>Cataloging of traditional pottery forms (e.g., cooking, storage, ritual)</li>
+                  <li>Documentation of natural pigments and firing processes </li>
+                  <li>Oral history collection from master potters</li>
+                  <li>Digital archive of finished documentation and 3D models of artifacts</li>
+                </ul>
+                <Link href="https://youtu.be/Tap5tkAEhfE?si=HQ_-_4LbKVUstEwR" className="btn">
+                  View Documentery video
+                </Link>
+              </div>
+            </div>
+          </section>
 
-          <section class="support-section">
-            <div class="header-content">
-              <h2 class="section-title">
-                <span class="icon-leaf">🌿</span> Our Model: Success Leads to New Initiatives
+          <section className="support-section">
+            <div className="header-content">
+              <h2 className="section-title">
+                <span className="icon-leaf">🌿</span> Our Model: Success Leads to New Initiatives
               </h2>
-              <p class="section-description">
+              <p className="section-description">
                 This completed project demonstrates our proven capability to preserve and archive vanishing cultural heritage.
               </p>
             </div>
 
-            <div class="grid-container">
-              <div class="grid-item">
-                <i class="fas fa-chart-line support-icon"></i>
-                <h3 class="item-title">Proven Impact</h3>
-                <p class="item-caption">Successfully delivered on all project metrics and archival goals.</p>
+            <div className="grid-container">
+              <div className="grid-item">
+                <i className="fas fa-chart-line support-icon"></i>
+                <h3 className="item-title">Proven Impact</h3>
+                <p className="item-caption">Successfully delivered on all project metrics and archival goals.</p>
               </div>
 
-              <div class="grid-item">
-                <i class="fas fa-handshake support-icon"></i>
-                <h3 class="item-title">Investor Trust</h3>
-                <p class="item-caption">Showcasing responsible use of funds and high-quality outputs.</p>
+              <div className="grid-item">
+                <i className="fas fa-handshake support-icon"></i>
+                <h3 className="item-title">Investor Trust</h3>
+                <p className="item-caption">Showcasing responsible use of funds and high-quality outputs.</p>
               </div>
 
-              <div class="grid-item">
-                <i class="fas fa-tools support-icon"></i>
-                <h3 class="item-title">Scalable Methods</h3>
-                <p class="item-caption">Utilizing established workflows for future, larger documentation projects.</p>
+              <div className="grid-item">
+                <i className="fas fa-tools support-icon"></i>
+                <h3 className="item-title">Scalable Methods</h3>
+                <p className="item-caption">Utilizing established workflows for future, larger documentation projects.</p>
               </div>
 
             </div>
-            <hr class="separator"></hr>
-            <div class="closing-statement">
-              Invest in our <b>proven track record</b> to secure the future of Sri Lankan heritage.
+            <hr className="separator"></hr>
+            <div className="closing-statement">
+              Invest in our **proven track record** to secure the future of Sri Lankan heritage.
             </div>
           </section>
 
@@ -259,18 +259,6 @@ export default function TradesCraftsProject() {
             font-family: "Inter", sans-serif;
           }
           
-        //   .project-cta {
-        //       display: inline-block;
-        //       padding: 10px 25px;
-        //       background-color: var(--color-primary);
-        //       color: white;
-        //       border-radius: 5px;
-        //       text-decoration: none;
-        //       font-weight: 600;
-        //       margin-top: 20px;
-        //       transition: background-color 0.3s;
-        //   }
-
           /* ------------------- HERO ------------------- */
           .hero {
               background: linear-gradient(
