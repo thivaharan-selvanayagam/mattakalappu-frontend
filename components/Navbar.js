@@ -24,6 +24,7 @@ export default function Navbar() {
                 <Link href="/stories">Stories</Link>
                 {/* <Link href="/villages">Villages</Link>
                 <Link href="/shop">Shop</Link> */}
+                <Link href="https://wa.me/94766656007?text=I%27m%20interested%20in%20sponsoring%20your%20documentation%20project.">Contact</Link>
             </div>
         </nav>
     );

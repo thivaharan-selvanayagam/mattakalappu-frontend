@@ -139,9 +139,10 @@ export default function Home({ posts }) {
             {/* <section className="section">
                 <h2 className="section-title">Featured Documentary</h2>
                 <div className="card featured-doc-card">
-                    <h3>Batticaloa Sothi – A Cultural Journey</h3>
-                    <p>A beautifully captured story that explores the roots and enduring traditions of Batticaloa's people and culture.</p>
-                    <a className="btn btn-outline1" href="#">Watch Now</a>
+                    <h3>Pottery – A Craft Journey</h3>
+                    <p>A beautifully captured story that explores the roots 
+                    and enduring traditions of Batticaloa's people and lifestyle.</p>
+                    <a className="btn btn-outline1" href="https://youtu.be/Tap5tkAEhfE?si=HQ_-_4LbKVUstEwR">Watch Now</a>
                 </div>
             </section> */}
 
@@ -151,7 +152,10 @@ export default function Home({ posts }) {
               <div className="card featured-doc-card">
                   <h3>The Quahog Trade: Batticaloa's Rare Marine Harvest</h3>
                   <p>
-                    This film chronicles the vanishing trade of Quahog fishing in Batticaloa, following the local fishermen from the sandy lagoons to the market, documenting their rare methods and the economic life built around this hard-shell clam.
+                    This film chronicles the vanishing trade of Quahog fishing 
+                    in Batticaloa, following the local fishermen from the sandy 
+                    lagoons to the market, documenting their rare methods and 
+                    the economic life built around this hard-shell clam.
                   </p>
                   <a className="btn btn-outline1" href="https://youtu.be/BiYYfwT998s?si=CtlvLb1B55MvcS3H">Watch Now</a>
               </div>
@@ -212,9 +216,7 @@ export default function Home({ posts }) {
                 /* Modern Reset and Variables */
                 
 
-                * {
-                    box-sizing: border-box;
-                }
+              
 
                 body {
                     margin: 0;
