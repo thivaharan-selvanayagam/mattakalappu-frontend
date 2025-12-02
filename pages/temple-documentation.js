@@ -69,7 +69,7 @@ export default function TempleDocumentationProject() {
           <div className="hero-content">
             <h1>Ancient Hindu Temple Documentation Project</h1>
             <p>
-              Preserving the **Historical, Spiritual, and Architectural** identity of old Hindu temples
+              Preserving the <b>Historical, Spiritual, and Architectural</b> identity of old Hindu temples
               in the Batticaloa region through comprehensive multimedia archiving.
             </p>
             <Link href="#project-details" className="btn">
@@ -83,7 +83,7 @@ export default function TempleDocumentationProject() {
           {/* 1. What is this project? */}
           <section className="section">
             <div className="project-card">
-              <img src="/ancient-temple-documentation.webp" alt="Detailed carving of a temple gopuram" /> {/* UPDATED Image */}
+              <img src="/temple (5).webp" alt="Detailed carving of a temple gopuram" /> {/* UPDATED Image */}
               <div className="project-content">
                 <h2>1. 🏛️ What is the Temple Documentation Project?</h2>
                 <p>
@@ -105,7 +105,7 @@ export default function TempleDocumentationProject() {
           {/* 2. Why we are doing this project? */}
           <section className="section">
               <div className="project-card reverse">
-                <img src="/ancient-temple-documentation.webp" alt="Researcher documenting an old temple inscription" /> {/* UPDATED Image */}
+                <img src="/temple (1).webp" alt="Researcher documenting an old temple inscription" /> {/* UPDATED Image */}
                 <div className="project-content">
                   <h2>2. 🌟 Why is This Documentation Essential?</h2>
                   <p>
@@ -130,7 +130,7 @@ export default function TempleDocumentationProject() {
           {/* 3. Who is the sponsors and incharge? */}
           <section className="section">
             <div className="project-card">
-              <img src="/ancient-temple-documentation.webp" alt="Project team meeting with sponsors" /> {/* UPDATED Image */}
+              <img src="/temple (8).webp" alt="Project team meeting with sponsors" /> {/* UPDATED Image */}
               <div className="project-content">
                 <h2>3. 🤝 Project Management and Sponsorship</h2>
                 <p>
@@ -142,7 +142,7 @@ export default function TempleDocumentationProject() {
                 </p>
                 <ul>
                   <li><b>Project Leading Organization</b>: Noolaham Foundation</li>
-                  <li><b>Field Documentation</b>: Batticaloa Heritage</li>
+                  <li><b>Field Documentation</b>: S. Thivaharan, T. Mithurshan and P. Nelaxshan</li>
                   <li><b>Project Guide/Mentor (Noolaham Foundation)</b>: Thillainathan Kopinath</li>
                 </ul>
                 
@@ -199,25 +199,14 @@ export default function TempleDocumentationProject() {
               </div>
             </div>
 
-            {/* Photo Gallery Output (8 photos in 2 lines) */}
-            <div className="photo-gallery">
-              <h3>High-Resolution Photographic Archive</h3>
-              <div className="photo-grid">
-                {[...Array(8)].map((_, index) => (
-                 
-                  <div key={index} className="photo-item">
-                    <img src={`/temple-${index + 1}.webp`} alt={`Documented Temple Photo ${index + 1}`} />
-                  </div>
-                ))}
-              </div>
-            </div>
+           
           </section>
 
           {/* 5. List of temples we documented */}
           <section className="section">
             <h2>5. 📜 Temples Documented in Phase I</h2>
             <p>
-              The first phase focused on recording four critically important temples known for their unique **Sthala Purāṇams** and architectural styles.
+              The first phase focused on recording four critically important temples known for their unique <b>Sthala Purāṇams</b> and architectural styles.
             </p>
             
             <div className="temple-list-grid">
@@ -278,7 +267,7 @@ export default function TempleDocumentationProject() {
               The heritage of these ancient temples is not static; it is a living tradition under threat.
               By supporting this project, you ensure the spiritual and historical narrative of Batticaloa is never lost.
             </p>
-            <Link href="mailto:contact@batticaloaheritage.org?subject=Sponsorship%20Inquiry%20-%20Temple%20Project" className="btn">
+            <Link href="https://wa.me/94766656007?text=I%27m%20interested%20in%20sponsoring%20your%20documentation%20project." className="btn">
               Support Phase II Documentation
             </Link>
           </section>
@@ -519,15 +508,7 @@ export default function TempleDocumentationProject() {
             margin-bottom: 30px;
           }
 
-          /* ------------------- FOOTER ------------------- */
-          .footer {
-            background-color: #333;
-            color: #aaa;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 14px;
-          }
-
+         
           /* ------------------- MEDIA QUERIES (Responsiveness) ------------------- */
           @media (max-width: 992px) {
             .project-card {

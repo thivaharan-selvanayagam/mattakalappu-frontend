@@ -216,9 +216,7 @@ export default function Home({ posts }) {
                 /* Modern Reset and Variables */
                 
 
-                * {
-                    box-sizing: border-box;
-                }
+              
 
                 body {
                     margin: 0;
