@@ -16,7 +16,7 @@ export default function TradesCraftsProject() {
         {/* Open Graph Meta Tags (This section is essential for WhatsApp preview) */}
         <meta property="og:title" content="Batticaloa Heritage – Traditional Trades & Crafts" />
         <meta property="og:description" content="A completed multimedia documentation project preserving the traditional knowledge and skills of Eastern, Northern, and Up-Country Sri Lanka." />
-        <meta property="og:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" /> {/* UPDATED Image */}
+        <meta property="og:image" content="https://hertiages.site/Trades & Crafts Documentation.webp" /> {/* UPDATED Image */}
         <meta property="og:url" content="https://hertiages.site/traditional-crafts" /> {/* UPDATED URL */}
         <meta property="og:type" content="website" />
 
@@ -24,7 +24,7 @@ export default function TradesCraftsProject() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Batticaloa Heritage – Traditional Trades & Crafts" />
         <meta name="twitter:description" content="A completed multimedia documentation project preserving the traditional knowledge and skills of Eastern, Northern, and Up-Country Sri Lanka." />
-        <meta name="twitter:image" content="https://hertiages.site/batticaloa-heritage-cover.webp" /> {/* UPDATED Image */}
+        <meta name="twitter:image" content="https://hertiages.site/Trades & Crafts Documentation.webp" /> {/* UPDATED Image */}
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></link>
       </Head>
@@ -84,14 +84,14 @@ export default function TradesCraftsProject() {
               <div className="project-content">
                 <h2>Our Proven Documentation Process</h2>
                 <p>
-                  Our methodology focuses on **rigor and archival standards**. The process involved cross-regional field trips, ethical interviews with full consent, and a focus on capturing the entire value chain—from raw material sourcing to the final product.
+                  Our methodology focuses on <b>rigor and archival standards</b>. The process involved cross-regional field trips, ethical interviews with full consent, and a focus on capturing the entire value chain—from raw material sourcing to the final product.
                 </p>
                 <ul>
-                  <li>✔ **Identify & Vette:** Located and secured participation from over 30 master artisans across three regions.</li>
-                  <li>✔ **Detailed Documentation:** Captured every step of the craft process with text and high-res photography.</li>
-                  <li>✔ **Video Archiving:** Filmed long-form, unedited process videos for archival security.</li>
-                  <li>✔ **Cultural Context:** Recorded oral histories, lineage, and the local economic significance of the craft.</li>
-                  <li>✔ **Final Publication:** All material released under **Creative Commons** licenses on open platforms.</li>
+                  <li>✔ <b>Identify & Vette:</b> Located and secured participation from over 30 master artisans across three regions.</li>
+                  <li>✔ <b>Detailed Documentation:</b> Captured every step of the craft process with text and high-res photography.</li>
+                  <li>✔ <b>Video Archiving:</b> Filmed long-form, unedited process videos for archival security.</li>
+                  <li>✔ <b>Cultural Context:</b> Recorded oral histories, lineage, and the local economic significance of the craft.</li>
+                  <li>✔ <b>Final Publication:</b> All material released under <b>Creative Commons</b> licenses on open platforms.</li>
                 </ul>
               </div>
             </div>
