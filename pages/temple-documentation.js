@@ -45,7 +45,7 @@ export default function TempleDocumentationProject() {
                 {/* Open Graph Meta Tags - UPDATED */}
                 <meta property="og:title" content="Batticaloa Heritage – Old Hindu Temple Documentation" />
                 <meta property="og:description" content="A comprehensive multimedia project preserving the historical, spiritual, and architectural heritage of ancient Hindu temples in Batticaloa." />
-                <meta property="og:image" content="https://hertiages.site/Hindu Temple Documentation.webp" /> 
+                <meta property="og:image" content="https://hertiages.site/Hindu-Temple-Documentation.webp" /> 
                 <meta property="og:url" content="https://hertiages.site/temple-documentation" /> 
                 <meta property="og:type" content="website" />
 
@@ -53,7 +53,7 @@ export default function TempleDocumentationProject() {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Batticaloa Heritage – Old Hindu Temple Documentation" />
                 <meta name="twitter:description" content="A comprehensive multimedia project preserving the historical, spiritual, and architectural heritage of ancient Hindu temples in Batticaloa." />
-                <meta name="twitter:image" content="https://hertiages.site/Hindu Temple Documentation.webp" /> 
+                <meta name="twitter:image" content="https://hertiages.site/Hindu-Temple-Documentation.webp" /> 
 
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></link>
             </Head>

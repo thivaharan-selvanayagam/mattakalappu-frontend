@@ -16,7 +16,7 @@ export default function TradesCraftsProject() {
         {/* Open Graph Meta Tags (This section is essential for WhatsApp preview) */}
         <meta property="og:title" content="Batticaloa Heritage – Traditional Trades & Crafts" />
         <meta property="og:description" content="A completed multimedia documentation project preserving the traditional knowledge and skills of Eastern, Northern, and Up-Country Sri Lanka." />
-        <meta property="og:image" content="https://hertiages.site/Trades & Crafts Documentation.webp" /> {/* UPDATED Image */}
+        <meta property="og:image" content="https://hertiages.site/Trades-and-Crafts-Documentation.webp" /> {/* UPDATED Image */}
         <meta property="og:url" content="https://hertiages.site/traditional-crafts" /> {/* UPDATED URL */}
         <meta property="og:type" content="website" />
 
@@ -24,7 +24,7 @@ export default function TradesCraftsProject() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Batticaloa Heritage – Traditional Trades & Crafts" />
         <meta name="twitter:description" content="A completed multimedia documentation project preserving the traditional knowledge and skills of Eastern, Northern, and Up-Country Sri Lanka." />
-        <meta name="twitter:image" content="https://hertiages.site/Trades & Crafts Documentation.webp" /> {/* UPDATED Image */}
+        <meta name="twitter:image" content="https://hertiages.site/Trades-and-Crafts-Documentation.webp" /> {/* UPDATED Image */}
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></link>
       </Head>

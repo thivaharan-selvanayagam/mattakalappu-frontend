@@ -69,7 +69,7 @@ export default function Home({ posts }) {
                 {/* Open Graph Meta Tags */}
                 <meta property="og:title" content="Batticaloa Heritage – Home" />
                 <meta property="og:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
-                <meta property="og:image" content="https://hertiages.site/Batticaloa Heritage.webp" />
+                <meta property="og:image" content="https://hertiages.site/Batticaloa-Heritage.webp" />
                 <meta property="og:url" content="https://hertiages.site/" />
                 <meta property="og:type" content="website" />
 
@@ -77,7 +77,7 @@ export default function Home({ posts }) {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Batticaloa Heritage – Preserving Culture, Food & History" />
                 <meta name="twitter:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
-                <meta name="twitter:image" content="https://hertiages.site/Batticaloa Heritage.webp" />
+                <meta name="twitter:image" content="https://hertiages.site/Batticaloa-Heritage.webp" />
 
                 {/* Font link */}
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />

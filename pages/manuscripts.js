@@ -17,7 +17,7 @@ export default function ManuscriptProject() {
       {/* Open Graph Meta Tags (For WhatsApp, Facebook, etc.) */}
       <meta property="og:title" content="Batticaloa Heritage – Manuscripts" />
       <meta property="og:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
-      <meta property="og:image" content="https://hertiages.site/Manuscripts translation.webp" />
+      <meta property="og:image" content="https://hertiages.site/Manuscripts-translation.webp" />
       <meta property="og:url" content="https://hertiages.site/manuscripts" />
       <meta property="og:type" content="website" />
 
@@ -25,7 +25,7 @@ export default function ManuscriptProject() {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Batticaloa Heritage – Manuscripts" />
       <meta name="twitter:description" content="Discover Batticaloa's rich heritage through traditional food culture, oral histories, community stories, and preservation projects." />
-      <meta name="twitter:image" content="https://hertiages.site/Manuscripts translation.webp" />
+      <meta name="twitter:image" content="https://hertiages.site/Manuscripts-translation.webp" />
       
       {/* External CSS Link */}
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
